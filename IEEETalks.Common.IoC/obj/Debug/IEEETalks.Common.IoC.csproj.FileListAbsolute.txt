@@ -1,0 +1,10 @@
+c:\users\lightgroup\documents\visual studio 2015\Projects\IEEETalks\IEEETalks.Common.IoC\bin\Debug\IEEETalks.Common.IoC.dll
+c:\users\lightgroup\documents\visual studio 2015\Projects\IEEETalks\IEEETalks.Common.IoC\bin\Debug\IEEETalks.Common.IoC.pdb
+c:\users\lightgroup\documents\visual studio 2015\Projects\IEEETalks\IEEETalks.Common.IoC\bin\Debug\StructureMap.dll
+c:\users\lightgroup\documents\visual studio 2015\Projects\IEEETalks\IEEETalks.Common.IoC\bin\Debug\StructureMap.Net4.dll
+c:\users\lightgroup\documents\visual studio 2015\Projects\IEEETalks\IEEETalks.Common.IoC\bin\Debug\StructureMap.pdb
+c:\users\lightgroup\documents\visual studio 2015\Projects\IEEETalks\IEEETalks.Common.IoC\bin\Debug\StructureMap.xml
+c:\users\lightgroup\documents\visual studio 2015\Projects\IEEETalks\IEEETalks.Common.IoC\bin\Debug\StructureMap.Net4.pdb
+c:\users\lightgroup\documents\visual studio 2015\Projects\IEEETalks\IEEETalks.Common.IoC\obj\Debug\IEEETalks.Common.IoC.csprojResolveAssemblyReference.cache
+c:\users\lightgroup\documents\visual studio 2015\Projects\IEEETalks\IEEETalks.Common.IoC\obj\Debug\IEEETalks.Common.IoC.dll
+c:\users\lightgroup\documents\visual studio 2015\Projects\IEEETalks\IEEETalks.Common.IoC\obj\Debug\IEEETalks.Common.IoC.pdb

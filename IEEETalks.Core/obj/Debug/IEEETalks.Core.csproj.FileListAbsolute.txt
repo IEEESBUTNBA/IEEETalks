@@ -1,0 +1,4 @@
+c:\users\lightgroup\documents\visual studio 2015\Projects\IEEETalks\IEEETalks.Core\bin\Debug\IEEETalks.Core.dll
+c:\users\lightgroup\documents\visual studio 2015\Projects\IEEETalks\IEEETalks.Core\bin\Debug\IEEETalks.Core.pdb
+c:\users\lightgroup\documents\visual studio 2015\Projects\IEEETalks\IEEETalks.Core\obj\Debug\IEEETalks.Core.dll
+c:\users\lightgroup\documents\visual studio 2015\Projects\IEEETalks\IEEETalks.Core\obj\Debug\IEEETalks.Core.pdb
