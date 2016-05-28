@@ -1,0 +1,7 @@
+C:\Users\Ignacio\Documents\GitHub\IEEETalks\IEEETalks.Data.Repositories\bin\Debug\IEEETalks.Data.Repositories.dll
+C:\Users\Ignacio\Documents\GitHub\IEEETalks\IEEETalks.Data.Repositories\bin\Debug\IEEETalks.Data.Repositories.pdb
+C:\Users\Ignacio\Documents\GitHub\IEEETalks\IEEETalks.Data.Repositories\obj\Debug\IEEETalks.Data.Repositories.dll
+C:\Users\Ignacio\Documents\GitHub\IEEETalks\IEEETalks.Data.Repositories\obj\Debug\IEEETalks.Data.Repositories.pdb
+C:\Users\Ignacio\Documents\GitHub\IEEETalks\IEEETalks.Data.Repositories\bin\Debug\IEEETalks.Core.dll
+C:\Users\Ignacio\Documents\GitHub\IEEETalks\IEEETalks.Data.Repositories\bin\Debug\IEEETalks.Core.pdb
+C:\Users\Ignacio\Documents\GitHub\IEEETalks\IEEETalks.Data.Repositories\obj\Debug\IEEETalks.Data.Repositories.csprojResolveAssemblyReference.cache
