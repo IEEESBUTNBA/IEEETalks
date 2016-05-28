@@ -2,3 +2,7 @@ c:\users\lightgroup\documents\visual studio 2015\Projects\IEEETalks\IEEETalks.Co
 c:\users\lightgroup\documents\visual studio 2015\Projects\IEEETalks\IEEETalks.Core\bin\Debug\IEEETalks.Core.pdb
 c:\users\lightgroup\documents\visual studio 2015\Projects\IEEETalks\IEEETalks.Core\obj\Debug\IEEETalks.Core.dll
 c:\users\lightgroup\documents\visual studio 2015\Projects\IEEETalks\IEEETalks.Core\obj\Debug\IEEETalks.Core.pdb
+C:\Users\Ignacio\Documents\GitHub\IEEETalks\IEEETalks.Core\bin\Debug\IEEETalks.Core.dll
+C:\Users\Ignacio\Documents\GitHub\IEEETalks\IEEETalks.Core\bin\Debug\IEEETalks.Core.pdb
+C:\Users\Ignacio\Documents\GitHub\IEEETalks\IEEETalks.Core\obj\Debug\IEEETalks.Core.dll
+C:\Users\Ignacio\Documents\GitHub\IEEETalks\IEEETalks.Core\obj\Debug\IEEETalks.Core.pdb
