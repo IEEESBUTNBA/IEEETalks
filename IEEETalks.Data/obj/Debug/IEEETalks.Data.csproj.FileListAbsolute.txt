@@ -2,3 +2,4 @@ C:\Users\Ignacio\Documents\GitHub\IEEETalks\IEEETalks.Data\bin\Debug\IEEETalks.D
 C:\Users\Ignacio\Documents\GitHub\IEEETalks\IEEETalks.Data\bin\Debug\IEEETalks.Data.pdb
 C:\Users\Ignacio\Documents\GitHub\IEEETalks\IEEETalks.Data\obj\Debug\IEEETalks.Data.dll
 C:\Users\Ignacio\Documents\GitHub\IEEETalks\IEEETalks.Data\obj\Debug\IEEETalks.Data.pdb
+C:\Users\Ignacio\Documents\GitHub\IEEETalks\IEEETalks.Data\obj\Debug\IEEETalks.Data.csprojResolveAssemblyReference.cache
