@@ -43,6 +43,14 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\BaseRepository.cs" />
     <Compile Include="Repositories\EventRepository\EventRepository.cs" />
+    <Compile Include="Repositories\EventRepository\IEventRepository.cs" />
+    <Compile Include="Repositories\IBaseRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\IEEETalks.Core\IEEETalks.Core.csproj">
+      <Project>{c894b274-294c-4b0d-91f1-1766d7bad8c8}</Project>
+      <Name>IEEETalks.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

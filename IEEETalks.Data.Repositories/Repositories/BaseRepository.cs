@@ -8,6 +8,6 @@ namespace IEEETalks.Data.Repositories.Repositories
 {
     public class BaseRepository<T> where T : class
     { 
-
+       
     }
 }
