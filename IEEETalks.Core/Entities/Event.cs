@@ -20,7 +20,7 @@ namespace IEEETalks.Core.Entities
         public float Price { get; set; }
         public EventState eventState { get; set; }
         public DateTime EventDate { get; set; }
-        public int MyProperty { get; set; }
+       
     }
 
     public enum EventState
