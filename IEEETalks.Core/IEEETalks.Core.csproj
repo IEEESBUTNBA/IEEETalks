@@ -41,7 +41,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entities\Event.cs" />
+    <Compile Include="Enums\EventState.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\IEEETalks.Common\IEEETalks.Common.csproj">
+      <Project>{8BA36301-8D49-42EA-A49C-9D124E59C72C}</Project>
+      <Name>IEEETalks.Common</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

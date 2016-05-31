@@ -5,3 +5,14 @@ C:\Users\Ignacio\Documents\GitHub\IEEETalks\IEEETalks.Data.Repositories\obj\Debu
 C:\Users\Ignacio\Documents\GitHub\IEEETalks\IEEETalks.Data.Repositories\bin\Debug\IEEETalks.Core.dll
 C:\Users\Ignacio\Documents\GitHub\IEEETalks\IEEETalks.Data.Repositories\bin\Debug\IEEETalks.Core.pdb
 C:\Users\Ignacio\Documents\GitHub\IEEETalks\IEEETalks.Data.Repositories\obj\Debug\IEEETalks.Data.Repositories.csprojResolveAssemblyReference.cache
+C:\Users\lightgroup\Documents\IEEE\IEEETalks\IEEETalks.Data.Repositories\bin\Debug\IEEETalks.Data.Repositories.dll
+C:\Users\lightgroup\Documents\IEEE\IEEETalks\IEEETalks.Data.Repositories\bin\Debug\IEEETalks.Data.Repositories.pdb
+C:\Users\lightgroup\Documents\IEEE\IEEETalks\IEEETalks.Data.Repositories\bin\Debug\IEEETalks.Core.dll
+C:\Users\lightgroup\Documents\IEEE\IEEETalks\IEEETalks.Data.Repositories\bin\Debug\IEEETalks.Common.dll
+C:\Users\lightgroup\Documents\IEEE\IEEETalks\IEEETalks.Data.Repositories\bin\Debug\IEEETalks.Core.pdb
+C:\Users\lightgroup\Documents\IEEE\IEEETalks\IEEETalks.Data.Repositories\bin\Debug\IEEETalks.Common.pdb
+C:\Users\lightgroup\Documents\IEEE\IEEETalks\IEEETalks.Data.Repositories\obj\Debug\IEEETalks.Data.Repositories.csprojResolveAssemblyReference.cache
+C:\Users\lightgroup\Documents\IEEE\IEEETalks\IEEETalks.Data.Repositories\obj\Debug\IEEETalks.Data.Repositories.dll
+C:\Users\lightgroup\Documents\IEEE\IEEETalks\IEEETalks.Data.Repositories\obj\Debug\IEEETalks.Data.Repositories.pdb
+C:\Users\lightgroup\Documents\IEEE\IEEETalks\IEEETalks.Data.Repositories\bin\Debug\IEEETalks.Data.dll
+C:\Users\lightgroup\Documents\IEEE\IEEETalks\IEEETalks.Data.Repositories\bin\Debug\IEEETalks.Data.pdb

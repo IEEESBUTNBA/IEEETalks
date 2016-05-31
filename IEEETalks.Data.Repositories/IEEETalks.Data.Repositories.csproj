@@ -41,17 +41,28 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repositories\BaseRepository.cs" />
-    <Compile Include="Repositories\EventRepository\EventRepository.cs" />
-    <Compile Include="Repositories\EventRepository\IEventRepository.cs" />
-    <Compile Include="Repositories\IBaseRepository.cs" />
+    <Compile Include="Repositories\EventRepositoryFake.cs" />
+    <Compile Include="Shared\BaseRepository.cs" />
+    <Compile Include="Interfaces\IEventRepository.cs" />
+    <Compile Include="Interfaces\IBaseRepository.cs" />
+    <Compile Include="Shared\ListResponse.cs" />
+    <Compile Include="Shared\SearchRequest.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\IEEETalks.Common\IEEETalks.Common.csproj">
+      <Project>{8BA36301-8D49-42EA-A49C-9D124E59C72C}</Project>
+      <Name>IEEETalks.Common</Name>
+    </ProjectReference>
     <ProjectReference Include="..\IEEETalks.Core\IEEETalks.Core.csproj">
       <Project>{c894b274-294c-4b0d-91f1-1766d7bad8c8}</Project>
       <Name>IEEETalks.Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\IEEETalks.Data\IEEETalks.Data.csproj">
+      <Project>{403E3690-828D-4027-A4FC-121294C8983B}</Project>
+      <Name>IEEETalks.Data</Name>
+    </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
