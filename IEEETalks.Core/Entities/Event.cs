@@ -18,5 +18,10 @@ namespace IEEETalks.Core.Entities
         public float Price { get; set; }
         public EventState EventState { get; set; }
         public DateTime EventDate { get; set; }
+
+        public Event()
+        {
+            this.Id = Guid.NewGuid();
+        }
     }
 }
