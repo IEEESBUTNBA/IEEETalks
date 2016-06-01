@@ -1,10 +1,10 @@
-﻿using System.Collections.Generic;
+﻿using IEEETalks.Common;
 using IEEETalks.Core.Entities;
 
 namespace IEEETalks.Data.Repositories.Interfaces
 {
     public interface IEventRepository : IBaseRespository<Event>
     {
-        List<Event> GetAll();
+        ListResponse<Event> GetAll();
     }
 }

@@ -14,32 +14,32 @@ namespace IEEETalks.Data.Repositories.Shared
 
         public virtual void Delete(T entity)
         {
-            uow.Delete<T>(entity);
+            uow.Session.Delete<T>(entity);
         }
 
         public virtual void DeleteMany(List<T> entities)
         {
             foreach (var entity in entities)
             {
-                uow.Delete<T>(entity);
+                uow.Session.Delete<T>(entity);
             }
         }
 
         public virtual T GetById(string id)
         {
-            return uow.Load<T>(id);
+            return uow.Session.Load<T>(id);
         }
 
         public virtual void Store(T entity)
         {
-            uow.Store(entity);
+            uow.Session.Store(entity);
         }
 
         public virtual void StoreMany(List<T> entities)
         {
             foreach (var entity in entities)
             {
-                uow.Store(entity);
+                uow.Session.Store(entity);
             }
         }
     }

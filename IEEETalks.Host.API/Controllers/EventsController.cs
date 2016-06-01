@@ -1,39 +1,54 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
+﻿using System.Collections.Generic;
 using System.Web.Http;
+using AutoMapper;
+using IEEETalks.Common.IoC;
+using IEEETalks.Core.Entities;
+using IEEETalks.Data.Repositories.Interfaces;
+using IEEETalks.Host.API.Models;
 
 namespace IEEETalks.Host.API.Controllers
 {
     public class EventsController : ApiController
     {
-        // GET: api/Events
-        public IEnumerable<string> Get()
+        private readonly IEventRepository _eventRepository;
+        private readonly IMapper _mapper;
+
+        public EventsController()
         {
-            return new string[] { "value1", "value2" };
+            _eventRepository = Container.Current.Resolve<IEventRepository>();
+
+            var mapperConfiguration = new MapperConfiguration(cfg =>
+            {
+                cfg.CreateMap<Event, EventDto>()
+                    .ForMember(dest => dest.ActivePeriodStart, opt => opt.MapFrom(ol => ol.ActivePeriod.Start))
+                    .ForMember(dest => dest.ActivePeriodEnd, opt => opt.MapFrom(ol => ol.ActivePeriod.End));
+            });
+
+            _mapper = mapperConfiguration.CreateMapper();
+        }
+
+        // GET: api/Events
+        public GetEventsResponse Get()
+        {
+            var result = _eventRepository.GetAll();
+
+            var response = new GetEventsResponse
+            {
+                Items = _mapper.Map<List<Event>, List<EventDto>>(result.Items),
+                TotalRecords = result.TotalRecords
+            };
+
+            return response;
         }
 
         // GET: api/Events/5
-        public string Get(string id)
+        public EventDto Get(string id)
         {
-            return "value";
-        }
+            var result = _eventRepository.GetById(id);
 
-        // POST: api/Events
-        public void Post([FromBody]string value)
-        {
-        }
+            var response = _mapper.Map<Event, EventDto>(result);
 
-        // PUT: api/Events/5
-        public void Put(int id, [FromBody]string value)
-        {
-        }
-
-        // DELETE: api/Events/5
-        public void Delete(int id)
-        {
+            return response;
         }
     }
 }

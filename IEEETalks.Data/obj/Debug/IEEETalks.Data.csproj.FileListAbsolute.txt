@@ -7,4 +7,3 @@ C:\Users\lightgroup\Documents\IEEE\IEEETalks\IEEETalks.Data\bin\Debug\IEEETalks.
 C:\Users\lightgroup\Documents\IEEE\IEEETalks\IEEETalks.Data\bin\Debug\IEEETalks.Data.pdb
 C:\Users\lightgroup\Documents\IEEE\IEEETalks\IEEETalks.Data\obj\Debug\IEEETalks.Data.dll
 C:\Users\lightgroup\Documents\IEEE\IEEETalks\IEEETalks.Data\obj\Debug\IEEETalks.Data.pdb
-C:\Users\lightgroup\Documents\IEEE\IEEETalks\IEEETalks.Data\obj\Debug\IEEETalks.Data.csprojResolveAssemblyReference.cache

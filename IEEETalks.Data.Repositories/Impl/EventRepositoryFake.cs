@@ -7,25 +7,34 @@ using IEEETalks.Core.Enums;
 using IEEETalks.Data.Repositories.Interfaces;
 using IEEETalks.Data.Repositories.Shared;
 
-namespace IEEETalks.Data.Repositories.Repositories
+namespace IEEETalks.Data.Repositories.Impl
 {
     public class EventRepositoryFake : BaseRepository<Event>, IEventRepository
     {
+        private static List<Event> _internalEventList;
+
         public EventRepositoryFake(IUnitOfWork uow) : base(uow)
         {
+            if (_internalEventList == null)
+                _internalEventList = GetAllInMemory();
         }
 
-        public List<Event> GetAll()
+        public ListResponse<Event> GetAll()
         {
-            var eventList = GetAllInMemory();
-            return eventList;
+            var result = new ListResponse<Event>()
+            {
+                Items = _internalEventList,
+                TotalRecords = _internalEventList.Count
+            };
+
+            return result;
         }
 
         public override Event GetById(string id)
         {
             var idGuid = new Guid(id);
 
-            return GetAllInMemory().FirstOrDefault(x => x.Id == idGuid);
+            return _internalEventList.FirstOrDefault(x => x.Id == idGuid);
         }
 
         private List<Event> GetAllInMemory()
