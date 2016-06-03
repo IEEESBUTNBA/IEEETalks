@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using IEEETalks.Core.Enums;
+using IEEETalks.Common;
 
 namespace IEEETalks.Core.Entities
 {
     public class Event
     {
-        public int Id { get; set; }
+        public Guid Id { get; set; }
         public int EntityId { get; set; }
         public string Name { get; set; }
         public string Summary { get; set; }
@@ -16,19 +14,14 @@ namespace IEEETalks.Core.Entities
         public string Image { get; set; }
         public string Location { get; set; }
         public int? Quota { get; set; }
-        public DateTime ActivePeriod { get; set; }
+        public DateTimeRange ActivePeriod { get; set; }
         public float Price { get; set; }
-        public EventState eventState { get; set; }
+        public EventState EventState { get; set; }
         public DateTime EventDate { get; set; }
-       
-    }
 
-    public enum EventState
-    {
-        Active,
-        Suspended,
-        Canceled,
-        Completed,
-        Remove
+        public Event()
+        {
+            this.Id = Guid.NewGuid();
+        }
     }
 }
