@@ -49,10 +49,11 @@ namespace IEEETalks.Data.Repositories.Impl
                 Summary = "Summary demo 1",
                 Description = "Description demo 1",
                 EventDate = DateTime.Today.AddDays(10),
-                Price = 0,
+                Price = 250,
                 Quota = 100,
                 EventState = EventState.Active,
-                Location = "UTN.BA (Medrano 951) - Aula Magna"                
+                Location = "UTN.BA (Medrano 951) - Aula Magna" ,
+                Image= "../img/ieee_ar_kite_azul_v[1].png"
             });
 
             list.Add(new Event()
@@ -63,12 +64,27 @@ namespace IEEETalks.Data.Repositories.Impl
                 Summary = "Summary demo 2",
                 Description = "Description demo 2",
                 EventDate = DateTime.Today.AddDays(10),
-                Price = 0,
+                Price = 120,
                 Quota = 100,
                 EventState = EventState.Active,
-                Location = "UTN.BA (Medrano 951) - Aula Magna"
+                Location = "UTN.BA (Medrano 951) - Aula Magna",
+                Image= "../img/ieee_ar_kite_azul_v[1].png"
             });
 
+            list.Add(new Event()
+            {
+                Id = Guid.NewGuid(),
+                ActivePeriod = DateTimeRange.CreateOneWeekRange(DateTime.Today),
+                Name = "Event Demo 3",
+                Summary = "Summary demo 3",
+                Description = "Description demo 3",
+                EventDate = DateTime.Today.AddDays(10),
+                Price = 100,
+                Quota = 100,
+                EventState = EventState.Active,
+                Location = "UTN.BA (Medrano 951) - Aula Magna",
+                Image = "../img/ieee_ar_kite_azul_v[1].png"
+            });
             // TODO: complete all fields and add more demo events.
 
             return list;

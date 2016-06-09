@@ -14,3 +14,5 @@ C:\Users\lightgroup\Documents\IEEE\IEEETalks\IEEETalks.Core\bin\Debug\IEEETalks.
 C:\Users\lightgroup\Documents\IEEE\IEEETalks\IEEETalks.Core\obj\Debug\IEEETalks.Core.csprojResolveAssemblyReference.cache
 C:\Users\lightgroup\Documents\IEEE\IEEETalks\IEEETalks.Core\obj\Debug\IEEETalks.Core.dll
 C:\Users\lightgroup\Documents\IEEE\IEEETalks\IEEETalks.Core\obj\Debug\IEEETalks.Core.pdb
+C:\Users\Ignacio\Documents\GitHub\IEEETalks\IEEETalks.Core\bin\Debug\IEEETalks.Common.dll
+C:\Users\Ignacio\Documents\GitHub\IEEETalks\IEEETalks.Core\bin\Debug\IEEETalks.Common.pdb

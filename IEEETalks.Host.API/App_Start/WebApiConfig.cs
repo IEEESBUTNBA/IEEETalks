@@ -1,4 +1,5 @@
-﻿using System.Net.Http.Formatting;
+﻿using Newtonsoft.Json.Serialization;
+using System.Net.Http.Formatting;
 using System.Web.Http;
 
 namespace IEEETalks.Host.API
@@ -9,6 +10,7 @@ namespace IEEETalks.Host.API
         {
             // Web API configuration and services
             var jsonFormatter = new JsonMediaTypeFormatter();
+            jsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
             config.Services.Replace(typeof(IContentNegotiator), new JsonContentNegotiator(jsonFormatter));
 
             // Web API routes
