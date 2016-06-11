@@ -40,6 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Impl\InscripcionIntendedRepositoryFake.cs" />
+    <Compile Include="Interfaces\IInscriptionIntended.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Impl\EventRepositoryFake.cs" />
     <Compile Include="Shared\BaseRepository.cs" />

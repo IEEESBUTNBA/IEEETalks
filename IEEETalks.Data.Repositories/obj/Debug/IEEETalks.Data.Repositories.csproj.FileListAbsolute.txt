@@ -20,3 +20,14 @@ C:\Users\Ignacio\Documents\GitHub\IEEETalks\IEEETalks.Data.Repositories\bin\Debu
 C:\Users\Ignacio\Documents\GitHub\IEEETalks\IEEETalks.Data.Repositories\bin\Debug\IEEETalks.Data.dll
 C:\Users\Ignacio\Documents\GitHub\IEEETalks\IEEETalks.Data.Repositories\bin\Debug\IEEETalks.Common.pdb
 C:\Users\Ignacio\Documents\GitHub\IEEETalks\IEEETalks.Data.Repositories\bin\Debug\IEEETalks.Data.pdb
+C:\Users\Dana\Source\Repos\IEEETalks\IEEETalks.Data.Repositories\obj\Debug\IEEETalks.Data.Repositories.csprojResolveAssemblyReference.cache
+C:\Users\Dana\Source\Repos\IEEETalks\IEEETalks.Data.Repositories\obj\Debug\IEEETalks.Data.Repositories.dll
+C:\Users\Dana\Source\Repos\IEEETalks\IEEETalks.Data.Repositories\obj\Debug\IEEETalks.Data.Repositories.pdb
+C:\Users\Dana\Source\Repos\IEEETalks\IEEETalks.Data.Repositories\bin\Debug\IEEETalks.Data.Repositories.dll
+C:\Users\Dana\Source\Repos\IEEETalks\IEEETalks.Data.Repositories\bin\Debug\IEEETalks.Data.Repositories.pdb
+C:\Users\Dana\Source\Repos\IEEETalks\IEEETalks.Data.Repositories\bin\Debug\IEEETalks.Common.dll
+C:\Users\Dana\Source\Repos\IEEETalks\IEEETalks.Data.Repositories\bin\Debug\IEEETalks.Core.dll
+C:\Users\Dana\Source\Repos\IEEETalks\IEEETalks.Data.Repositories\bin\Debug\IEEETalks.Data.dll
+C:\Users\Dana\Source\Repos\IEEETalks\IEEETalks.Data.Repositories\bin\Debug\IEEETalks.Common.pdb
+C:\Users\Dana\Source\Repos\IEEETalks\IEEETalks.Data.Repositories\bin\Debug\IEEETalks.Core.pdb
+C:\Users\Dana\Source\Repos\IEEETalks\IEEETalks.Data.Repositories\bin\Debug\IEEETalks.Data.pdb

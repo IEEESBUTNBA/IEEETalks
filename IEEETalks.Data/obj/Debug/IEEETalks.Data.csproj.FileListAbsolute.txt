@@ -7,3 +7,8 @@ C:\Users\lightgroup\Documents\IEEE\IEEETalks\IEEETalks.Data\bin\Debug\IEEETalks.
 C:\Users\lightgroup\Documents\IEEE\IEEETalks\IEEETalks.Data\bin\Debug\IEEETalks.Data.pdb
 C:\Users\lightgroup\Documents\IEEE\IEEETalks\IEEETalks.Data\obj\Debug\IEEETalks.Data.dll
 C:\Users\lightgroup\Documents\IEEE\IEEETalks\IEEETalks.Data\obj\Debug\IEEETalks.Data.pdb
+C:\Users\Dana\Source\Repos\IEEETalks\IEEETalks.Data\bin\Debug\IEEETalks.Data.dll
+C:\Users\Dana\Source\Repos\IEEETalks\IEEETalks.Data\bin\Debug\IEEETalks.Data.pdb
+C:\Users\Dana\Source\Repos\IEEETalks\IEEETalks.Data\obj\Debug\IEEETalks.Data.csprojResolveAssemblyReference.cache
+C:\Users\Dana\Source\Repos\IEEETalks\IEEETalks.Data\obj\Debug\IEEETalks.Data.dll
+C:\Users\Dana\Source\Repos\IEEETalks\IEEETalks.Data\obj\Debug\IEEETalks.Data.pdb

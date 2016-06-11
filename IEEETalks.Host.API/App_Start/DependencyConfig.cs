@@ -13,6 +13,7 @@ namespace IEEETalks.Host.API
 
             Container.Current.Register<IUnitOfWork, UnitOfWorkFake>();
             Container.Current.Register<IEventRepository, EventRepositoryFake>();
+            Container.Current.Register<IInscriptionIntended, InscripcionIntendedRepositoryFake>();
         }
     }
 }
