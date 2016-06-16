@@ -53,7 +53,7 @@ namespace IEEETalks.Data.Repositories.Impl
                 Quota = 100,
                 EventState = EventState.Active,
                 Location = "UTN.BA (Medrano 951) - Aula Magna" ,
-                Image= "../img/ieee_ar_kite_azul_v[1].png"
+                Image= "../img/ieee[3].jpg"
             });
 
             list.Add(new Event()
@@ -68,7 +68,7 @@ namespace IEEETalks.Data.Repositories.Impl
                 Quota = 100,
                 EventState = EventState.Active,
                 Location = "UTN.BA (Medrano 951) - Aula Magna",
-                Image= "../img/ieee_ar_kite_azul_v[1].png"
+                Image= "../img/14474300157302[1].jpg"
             });
 
             list.Add(new Event()
@@ -84,6 +84,20 @@ namespace IEEETalks.Data.Repositories.Impl
                 EventState = EventState.Active,
                 Location = "UTN.BA (Medrano 951) - Aula Magna",
                 Image = "../img/ieee_ar_kite_azul_v[1].png"
+            });
+            list.Add(new Event()
+            {
+                Id = Guid.NewGuid(),
+                ActivePeriod = DateTimeRange.CreateOneWeekRange(DateTime.Today),
+                Name = "Event Demo 4",
+                Summary = "Summary demo 4",
+                Description = "Description demo 4",
+                EventDate = DateTime.Today.AddDays(10),
+                Price = 100,
+                Quota = 100,
+                EventState = EventState.Active,
+                Location = "UTN.BA (Medrano 951) - Aula Magna",
+                Image = "../img/14474300157302[1].jpg"
             });
             // TODO: complete all fields and add more demo events.
 
