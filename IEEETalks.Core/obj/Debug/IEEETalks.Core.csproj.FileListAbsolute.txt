@@ -16,3 +16,10 @@ C:\Users\lightgroup\Documents\IEEE\IEEETalks\IEEETalks.Core\obj\Debug\IEEETalks.
 C:\Users\lightgroup\Documents\IEEE\IEEETalks\IEEETalks.Core\obj\Debug\IEEETalks.Core.pdb
 C:\Users\Ignacio\Documents\GitHub\IEEETalks\IEEETalks.Core\bin\Debug\IEEETalks.Common.dll
 C:\Users\Ignacio\Documents\GitHub\IEEETalks\IEEETalks.Core\bin\Debug\IEEETalks.Common.pdb
+C:\Users\Dana\Source\Repos\IEEETalks\IEEETalks.Core\bin\Debug\IEEETalks.Core.dll
+C:\Users\Dana\Source\Repos\IEEETalks\IEEETalks.Core\bin\Debug\IEEETalks.Core.pdb
+C:\Users\Dana\Source\Repos\IEEETalks\IEEETalks.Core\bin\Debug\IEEETalks.Common.dll
+C:\Users\Dana\Source\Repos\IEEETalks\IEEETalks.Core\bin\Debug\IEEETalks.Common.pdb
+C:\Users\Dana\Source\Repos\IEEETalks\IEEETalks.Core\obj\Debug\IEEETalks.Core.csprojResolveAssemblyReference.cache
+C:\Users\Dana\Source\Repos\IEEETalks\IEEETalks.Core\obj\Debug\IEEETalks.Core.dll
+C:\Users\Dana\Source\Repos\IEEETalks\IEEETalks.Core\obj\Debug\IEEETalks.Core.pdb
