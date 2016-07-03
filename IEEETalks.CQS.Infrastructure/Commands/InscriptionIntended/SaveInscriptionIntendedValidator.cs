@@ -3,7 +3,6 @@ using System.Linq;
 using FluentValidation;
 using IEEETalks.Core.Entities;
 using IEEETalks.Core.Enums;
-using IEEETalks.CQS.Infrastructure.CommandProcessor;
 
 namespace IEEETalks.CQS.Infrastructure.Commands
 {
