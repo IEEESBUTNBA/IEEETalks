@@ -26,8 +26,6 @@ namespace IEEETalks.Host.API.Controllers
             var mapperConfiguration = new MapperConfiguration(cfg =>
             {
                 cfg.CreateMap<Event, EventDto>()
-                    .ForMember(dest => dest.ActivePeriodStart, opt => opt.MapFrom(ol => ol.ActiveStartDate))
-                    .ForMember(dest => dest.ActivePeriodEnd, opt => opt.MapFrom(ol => ol.ActiveEndDate))
                     .ForMember(dest => dest.EventDate, opt => opt.MapFrom(ol => ol.GetFirstEventDate()));
             });
 

@@ -16,8 +16,8 @@ namespace IEEETalks.Core.Entities
         public string Image { get; set; }
         public string Location { get; set; }
         public int? Quota { get; set; }
-        public DateTime ActiveStartDate { get; set; }
-        public DateTime ActiveEndDate { get; set; }
+        public DateTime ActiveSinceDate { get; set; }
+        public DateTime ActiveUntilDate { get; set; }
         public float Price { get; set; }
         public EventState EventState { get; set; }
         public List<EventDate> EventDates { get; set; }

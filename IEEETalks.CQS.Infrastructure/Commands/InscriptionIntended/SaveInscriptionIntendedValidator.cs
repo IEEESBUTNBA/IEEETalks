@@ -62,8 +62,8 @@ namespace IEEETalks.CQS.Infrastructure.Commands
             var result = this._session.GetQueryable<Event>()
                         .Any(x =>
                             x.EventState == EventState.Active &&
-                            x.ActiveStartDate >= today &&
-                            x.ActiveEndDate <= today
+                            x.ActiveSinceDate >= today &&
+                            x.ActiveUntilDate <= today
                         );
 
             return result;

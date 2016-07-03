@@ -13,8 +13,8 @@ namespace IEEETalks.Host.API.Models
         public string Image { get; set; }
         public string Location { get; set; }
         public int? Quota { get; set; }
-        public DateTime ActivePeriodStart { get; set; }
-        public DateTime ActivePeriodEnd { get; set; }
+        public DateTime ActiveSinceDate { get; set; }
+        public DateTime ActiveUntilDate { get; set; }
         public float Price { get; set; }
         public EventState EventState { get; set; }
         public DateTime EventDate { get; set; }
