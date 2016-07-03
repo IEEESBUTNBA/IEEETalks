@@ -1,3 +1,4 @@
 # IEEETalks
 
-[![Build Status](https://travis-ci.org/IEEESBUTNBA/IEEETalks.svg?branch=master)](https://travis-ci.org/IEEESBUTNBA/IEEETalks)
+[![Build Status](https://ci.appveyor.com/api/projects/status/github/IEEESBUTNBA?branch=master&svg=true)](https://ci.appveyor.com/api/projects/status/github/IEEESBUTNBA)
+
