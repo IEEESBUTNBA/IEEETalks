@@ -1,27 +1,34 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Web.Http;
 using AutoMapper;
 using IEEETalks.Common.IoC;
 using IEEETalks.Core.Entities;
-using IEEETalks.Data.Repositories.Interfaces;
+using IEEETalks.CQS.Infrastructure.Queries;
 using IEEETalks.Host.API.Models;
 
 namespace IEEETalks.Host.API.Controllers
 {
     public class EventsController : ApiController
     {
-        private readonly IEventRepository _eventRepository;
+        //private readonly ICommandBus _commandBus;
+        private readonly GetActiveEvents _getActiveEventsQuery;
+        private readonly GetEvent _getEventQuery;
+
         private readonly IMapper _mapper;
 
         public EventsController()
         {
-            _eventRepository = Container.Current.Resolve<IEventRepository>();
+            //_commandBus = Container.Current.Resolve<ICommandBus>();
+            _getActiveEventsQuery = Container.Current.Resolve<GetActiveEvents>();
+            _getEventQuery = Container.Current.Resolve<GetEvent>();
 
             var mapperConfiguration = new MapperConfiguration(cfg =>
             {
                 cfg.CreateMap<Event, EventDto>()
-                    .ForMember(dest => dest.ActivePeriodStart, opt => opt.MapFrom(ol => ol.ActivePeriod.Start))
-                    .ForMember(dest => dest.ActivePeriodEnd, opt => opt.MapFrom(ol => ol.ActivePeriod.End));
+                    .ForMember(dest => dest.ActivePeriodStart, opt => opt.MapFrom(ol => ol.ActiveStartDate))
+                    .ForMember(dest => dest.ActivePeriodEnd, opt => opt.MapFrom(ol => ol.ActiveEndDate))
+                    .ForMember(dest => dest.EventDate, opt => opt.MapFrom(ol => ol.GetFirstEventDate()));
             });
 
             _mapper = mapperConfiguration.CreateMapper();
@@ -30,7 +37,8 @@ namespace IEEETalks.Host.API.Controllers
         // GET: api/Events
         public GetEventsResponse Get()
         {
-            var result = _eventRepository.GetAll();
+            // TODO: add logic to paginate.
+            var result = _getActiveEventsQuery.Run(0, 100);
 
             var response = new GetEventsResponse
             {
@@ -41,10 +49,10 @@ namespace IEEETalks.Host.API.Controllers
             return response;
         }
 
-        // GET: api/Events/5
-        public EventDto Get(string id)
+        // GET: api/Events/{id}
+        public EventDto Get(Guid id)
         {
-            var result = _eventRepository.GetById(id);
+            var result = _getEventQuery.Run(id);
 
             var response = _mapper.Map<Event, EventDto>(result);
 

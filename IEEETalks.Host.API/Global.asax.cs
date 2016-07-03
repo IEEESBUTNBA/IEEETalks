@@ -7,7 +7,7 @@ namespace IEEETalks.Host.API
     {
         protected void Application_Start()
         {
-            DependencyConfig.RegisterAll();
+            DependenciesConfig.RegisterAll();
             GlobalConfiguration.Configure(WebApiConfig.Register);
         }
     }

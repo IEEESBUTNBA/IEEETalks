@@ -43,8 +43,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AutoMapper, Version=4.2.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
-      <HintPath>..\packages\AutoMapper.4.2.1\lib\net45\AutoMapper.dll</HintPath>
+    <Reference Include="AutoMapper, Version=5.0.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.5.0.0\lib\net45\AutoMapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FluentValidation, Version=6.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentValidation.6.2.1.0\lib\Net45\FluentValidation.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -52,8 +56,8 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.8.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Net.Http" />
@@ -90,11 +94,12 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_Start\DependencyConfig.cs" />
+    <Compile Include="App_Start\DependenciesConfig.cs" />
     <Compile Include="App_Start\JsonContentNegotiator.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\EventsController.cs" />
     <Compile Include="Controllers\InscriptionIntendedController.cs" />
+    <Compile Include="Extensions\ControllerExtensions.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -126,13 +131,9 @@
       <Project>{C894B274-294C-4B0D-91F1-1766D7BAD8C8}</Project>
       <Name>IEEETalks.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\IEEETalks.Data.Repositories\IEEETalks.Data.Repositories.csproj">
-      <Project>{749F9C29-432D-4C4C-A505-D44EE75EE215}</Project>
-      <Name>IEEETalks.Data.Repositories</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\IEEETalks.Data\IEEETalks.Data.csproj">
-      <Project>{403E3690-828D-4027-A4FC-121294C8983B}</Project>
-      <Name>IEEETalks.Data</Name>
+    <ProjectReference Include="..\IEEETalks.CQS.Infrastructure\IEEETalks.CQS.Infrastructure.csproj">
+      <Project>{6b9185d0-e191-4442-885b-c8c62f9f9ea8}</Project>
+      <Name>IEEETalks.CQS.Infrastructure</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApplicationSettings.cs" />
     <Compile Include="DateTimeRange.cs" />
     <Compile Include="Guard.cs" />
     <Compile Include="ListResponse.cs" />

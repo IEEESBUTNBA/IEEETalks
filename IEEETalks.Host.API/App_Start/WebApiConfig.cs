@@ -1,6 +1,6 @@
-﻿using Newtonsoft.Json.Serialization;
-using System.Net.Http.Formatting;
+﻿using System.Net.Http.Formatting;
 using System.Web.Http;
+using Newtonsoft.Json.Serialization;
 
 namespace IEEETalks.Host.API
 {
@@ -9,8 +9,10 @@ namespace IEEETalks.Host.API
         public static void Register(HttpConfiguration config)
         {
             // Web API configuration and services
-            var jsonFormatter = new JsonMediaTypeFormatter();
-            jsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
+            var jsonFormatter = new JsonMediaTypeFormatter
+            {
+                SerializerSettings = {ContractResolver = new CamelCasePropertyNamesContractResolver()}
+            };
             config.Services.Replace(typeof(IContentNegotiator), new JsonContentNegotiator(jsonFormatter));
 
             // Web API routes

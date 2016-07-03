@@ -11,14 +11,6 @@ c:\users\lightgroup\documents\visual studio 2015\Projects\IEEETalks\IEEETalks.Co
 C:\Users\Ignacio\Documents\GitHub\IEEETalks\IEEETalks.Common.IoC\obj\Debug\IEEETalks.Common.IoC.csprojResolveAssemblyReference.cache
 C:\Users\Ignacio\Documents\GitHub\IEEETalks\IEEETalks.Common.IoC\obj\Debug\IEEETalks.Common.IoC.dll
 C:\Users\Ignacio\Documents\GitHub\IEEETalks\IEEETalks.Common.IoC\obj\Debug\IEEETalks.Common.IoC.pdb
-C:\Users\lightgroup\Documents\IEEE\IEEETalks\IEEETalks.Common.IoC\bin\Debug\IEEETalks.Common.IoC.dll
-C:\Users\lightgroup\Documents\IEEE\IEEETalks\IEEETalks.Common.IoC\bin\Debug\IEEETalks.Common.IoC.pdb
-C:\Users\lightgroup\Documents\IEEE\IEEETalks\IEEETalks.Common.IoC\bin\Debug\StructureMap.dll
-C:\Users\lightgroup\Documents\IEEE\IEEETalks\IEEETalks.Common.IoC\bin\Debug\StructureMap.Net4.dll
-C:\Users\lightgroup\Documents\IEEE\IEEETalks\IEEETalks.Common.IoC\bin\Debug\StructureMap.pdb
-C:\Users\lightgroup\Documents\IEEE\IEEETalks\IEEETalks.Common.IoC\bin\Debug\StructureMap.Net4.pdb
-C:\Users\lightgroup\Documents\IEEE\IEEETalks\IEEETalks.Common.IoC\obj\Debug\IEEETalks.Common.IoC.dll
-C:\Users\lightgroup\Documents\IEEE\IEEETalks\IEEETalks.Common.IoC\obj\Debug\IEEETalks.Common.IoC.pdb
 C:\Users\Dana\Source\Repos\IEEETalks\IEEETalks.Common.IoC\bin\Debug\IEEETalks.Common.IoC.dll
 C:\Users\Dana\Source\Repos\IEEETalks\IEEETalks.Common.IoC\bin\Debug\IEEETalks.Common.IoC.pdb
 C:\Users\Dana\Source\Repos\IEEETalks\IEEETalks.Common.IoC\bin\Debug\StructureMap.dll
@@ -28,3 +20,12 @@ C:\Users\Dana\Source\Repos\IEEETalks\IEEETalks.Common.IoC\bin\Debug\StructureMap
 C:\Users\Dana\Source\Repos\IEEETalks\IEEETalks.Common.IoC\obj\Debug\IEEETalks.Common.IoC.csprojResolveAssemblyReference.cache
 C:\Users\Dana\Source\Repos\IEEETalks\IEEETalks.Common.IoC\obj\Debug\IEEETalks.Common.IoC.dll
 C:\Users\Dana\Source\Repos\IEEETalks\IEEETalks.Common.IoC\obj\Debug\IEEETalks.Common.IoC.pdb
+C:\Users\lightgroup\Documents\IEEE\IEEETalks\IEEETalks.Common.IoC\bin\Debug\IEEETalks.Common.IoC.dll
+C:\Users\lightgroup\Documents\IEEE\IEEETalks\IEEETalks.Common.IoC\bin\Debug\IEEETalks.Common.IoC.pdb
+C:\Users\lightgroup\Documents\IEEE\IEEETalks\IEEETalks.Common.IoC\bin\Debug\StructureMap.dll
+C:\Users\lightgroup\Documents\IEEE\IEEETalks\IEEETalks.Common.IoC\bin\Debug\StructureMap.Net4.dll
+C:\Users\lightgroup\Documents\IEEE\IEEETalks\IEEETalks.Common.IoC\bin\Debug\StructureMap.pdb
+C:\Users\lightgroup\Documents\IEEE\IEEETalks\IEEETalks.Common.IoC\bin\Debug\StructureMap.xml
+C:\Users\lightgroup\Documents\IEEE\IEEETalks\IEEETalks.Common.IoC\bin\Debug\StructureMap.Net4.pdb
+C:\Users\lightgroup\Documents\IEEE\IEEETalks\IEEETalks.Common.IoC\obj\Debug\IEEETalks.Common.IoC.dll
+C:\Users\lightgroup\Documents\IEEE\IEEETalks\IEEETalks.Common.IoC\obj\Debug\IEEETalks.Common.IoC.pdb
