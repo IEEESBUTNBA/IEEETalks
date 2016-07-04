@@ -1,5 +1,4 @@
-﻿using IEEETalks.Core.Entities;
-using IEEETalks.CQS.Infrastructure.CommandProcessor;
+﻿using IEEETalks.CQS.Infrastructure.CommandProcessor;
 
 namespace IEEETalks.CQS.Infrastructure.Commands
 {

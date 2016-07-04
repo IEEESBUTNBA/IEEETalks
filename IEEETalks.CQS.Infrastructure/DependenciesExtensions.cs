@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using FluentValidation;
+﻿using FluentValidation;
 using IEEETalks.Common.IoC;
 using IEEETalks.CQS.Infrastructure.CommandProcessor;
 using IEEETalks.CQS.Infrastructure.Commands;
@@ -31,7 +26,7 @@ namespace IEEETalks.CQS.Infrastructure
 
         public static void RegisterCQSSessionAndCommandBus(this IContainer currentContainer)
         {
-            currentContainer.Register<ISession, Session>();
+            currentContainer.Register<ISession, SessionMock>();
             currentContainer.Register<ICommandBus, CommandBus>();
         }
     }

@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using IEEETalks.Common;
 using IEEETalks.Core.Entities;
@@ -24,16 +23,16 @@ namespace IEEETalks.CQS.Infrastructure.Queries
             var result = this._session.GetQueryable<Event>()
                         .Where( x =>
                                 x.EventState == EventState.Active && 
-                                x.ActiveSinceDate >= today &&
-                                x.ActiveUntilDate <= today
+                                x.ActiveSinceDate <= today &&
+                                x.ActiveUntilDate >= today
                               )
                         .Skip(skip).Take(limit).ToList();
 
             var count = this._session.GetQueryable<Event>()
                         .Count(x =>
                             x.EventState == EventState.Active &&
-                            x.ActiveSinceDate >= today &&
-                            x.ActiveUntilDate <= today
+                            x.ActiveSinceDate <= today &&
+                            x.ActiveUntilDate >= today
                         );                        
 
             return new ListResponse<Event>()

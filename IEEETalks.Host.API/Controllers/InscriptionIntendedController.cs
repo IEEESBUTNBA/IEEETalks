@@ -1,13 +1,10 @@
-﻿using System.Net;
-using System.Net.Http;
-using System.Web.Http;
+﻿using System.Web.Http;
 using AutoMapper;
 using IEEETalks.Common.IoC;
 using IEEETalks.Core.Entities;
 using IEEETalks.CQS.Infrastructure.CommandProcessor;
 using IEEETalks.CQS.Infrastructure.Commands;
 using IEEETalks.Host.API.Models;
-using Newtonsoft.Json;
 
 namespace IEEETalks.Host.API.Controllers
 {

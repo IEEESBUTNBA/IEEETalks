@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 using IEEETalks.Core.Entities;
 
 namespace IEEETalks.CQS.Infrastructure.Queries
@@ -15,8 +14,7 @@ namespace IEEETalks.CQS.Infrastructure.Queries
 
         public Event Run(Guid id)
         {
-            var result = this._session.GetQueryable<Event>()
-                            .FirstOrDefault(x => x.Id == id);
+            var result = this._session.GetById<Event>(id);
 
             return result;
         }

@@ -2,6 +2,7 @@ using System;
 using System.Linq;
 using MongoDB.Driver;
 using IEEETalks.Common;
+using MongoDB.Bson;
 
 namespace IEEETalks.CQS.Infrastructure
 {
@@ -19,7 +20,8 @@ namespace IEEETalks.CQS.Infrastructure
         public void Store<T>(string id, T item)
         {
             //var filter = Builders<T>.Filter.Eq(s => s.Id, id);
-            var filter = Builders<T>.Filter.Eq("Id", id);
+            //var filter = Builders<T>.Filter.Eq("Id", id);
+            var filter = new BsonDocument { { "_id", id } };
             CurrentCollection<T>().ReplaceOne(filter, item, new UpdateOptions() { IsUpsert = true });
         }
 
@@ -30,9 +32,24 @@ namespace IEEETalks.CQS.Infrastructure
 
         public void Remove<T>(string id)
         {
-            //var filter = Builders<T>.Filter.Eq(s => s.Id, id);
-            var filter = Builders<T>.Filter.Eq("Id", id);
+            var filter = new BsonDocument { { "_id", id } };
             CurrentCollection<T>().DeleteOne(filter);
+        }
+
+        public void Remove<T>(Guid id)
+        {
+            Remove<T>(id.ToString());
+        }
+
+        public T GetById<T>(string id)
+        {
+            var filter = new BsonDocument { { "_id", id } };
+            return CurrentCollection<T>().Find(filter).FirstOrDefault();
+        }
+
+        public T GetById<T>(Guid id)
+        {
+            return GetById<T>(id.ToString());
         }
 
         private string GetCollectionName<T>()
