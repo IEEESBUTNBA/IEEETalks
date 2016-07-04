@@ -54,6 +54,8 @@ namespace IEEETalks.Host.API.Controllers
 
             var response = _mapper.Map<Event, EventDto>(result);
 
+            this.ValidateNull(response, $"The event is not found (id: {id})");
+
             return response;
         }
     }
