@@ -26,7 +26,7 @@ namespace IEEETalks.CQS.Infrastructure
 
         public static void RegisterCQSSessionAndCommandBus(this IContainer currentContainer)
         {
-            currentContainer.Register<ISession, Session>();
+            currentContainer.Register<ISession, SessionMock>();
             currentContainer.Register<ICommandBus, CommandBus>();
         }
     }

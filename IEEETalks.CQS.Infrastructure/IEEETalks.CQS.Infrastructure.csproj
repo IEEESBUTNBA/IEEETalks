@@ -73,6 +73,7 @@
     <Compile Include="Queries\GetActiveEvents.cs" />
     <Compile Include="Queries\IQuery.cs" />
     <Compile Include="Session.cs" />
+    <Compile Include="SessionMock.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
