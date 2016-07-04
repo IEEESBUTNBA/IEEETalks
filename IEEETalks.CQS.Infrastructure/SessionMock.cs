@@ -43,9 +43,9 @@ namespace IEEETalks.CQS.Infrastructure
                           select x).FirstOrDefault();
 
             if (result != null)
-                _collections[typeof(T).Name] = (dynamic)item;
-            else
-                _collections[typeof(T).Name].Add(item);
+                this.Remove<T>(result.Id);
+
+            _collections[typeof(T).Name].Add(item);
         }
 
         public void Remove<T>(string id)
