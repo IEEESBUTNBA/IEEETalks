@@ -12,47 +12,69 @@ namespace IEEETalks.CQS.Infrastructure
     public class SessionMock : ISession
     {
         private readonly string _boundedContext;
-        private static Dictionary<string, List<object>> _collections;
+        private static Dictionary<string, List<dynamic>> _collections;
 
         public SessionMock(string boundedContext = "IEEETalks-Default")
         {
             _boundedContext = boundedContext;
-            _collections = new Dictionary<string, List<object>>
+            if (_collections == null)
             {
+                _collections = new Dictionary<string, List<dynamic>>
                 {
-                    typeof(Event).Name, GetAllInMemory().Cast<object>().ToList()
-                }
-            };
+                    {
+                        typeof(Event).Name, GetAllInMemory().Cast<dynamic>().ToList()
+                    },
+                    {
+                        typeof(InscriptionIntended).Name, (new List<InscriptionIntended>()).Cast<dynamic>().ToList()
+                    }
+                };
+            }
         }
 
         public void Store<T>(string id, T item)
         {
-            throw new NotImplementedException();
+            Store<T>(new Guid(id), item);
         }
 
         public void Store<T>(Guid id, T item)
         {
-            throw new NotImplementedException();
+            var result = (from x in _collections[typeof(T).Name]
+                          where x.Id == id
+                          select x).FirstOrDefault();
+
+            if (result != null)
+                _collections[typeof(T).Name] = (dynamic)item;
+            else
+                _collections[typeof(T).Name].Add(item);
         }
 
         public void Remove<T>(string id)
         {
-            throw new NotImplementedException();
+            Remove<T>(new Guid(id));
         }
 
         public void Remove<T>(Guid id)
         {
-            throw new NotImplementedException();
+            var result = (from x in _collections[typeof(T).Name]
+                          where x.Id == id
+                          select x).FirstOrDefault();
+
+            if (result != null)
+                _collections[typeof(T).Name].Remove(result);
         }
 
         public T GetById<T>(string id)
         {
-            throw new NotImplementedException();
+            return GetById<T>(new Guid(id));
         }
 
         public T GetById<T>(Guid id)
         {
-            throw new NotImplementedException();
+            var result = (from x in _collections[typeof(T).Name]
+                        where x.Id == id
+                        select x).FirstOrDefault();
+
+            return result;
         }
 
         public IQueryable<T> GetQueryable<T>()
