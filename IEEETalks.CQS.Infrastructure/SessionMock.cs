@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using IEEETalks.Common;
 using IEEETalks.Core.Entities;
 using IEEETalks.Core.Enums;
@@ -105,7 +103,7 @@ namespace IEEETalks.CQS.Infrastructure
 
             list.Add(new Event()
             {
-                Id = Guid.NewGuid(),
+                Id = new Guid("20133f6d-5356-4ed2-b0fa-75dc73646499"),
                 ActiveSinceDate = activeRange.Start,
                 ActiveUntilDate = activeRange.End,
                 Name = "Event Demo 1",
@@ -121,7 +119,7 @@ namespace IEEETalks.CQS.Infrastructure
 
             list.Add(new Event()
             {
-                Id = Guid.NewGuid(),
+                Id = new Guid("1aac76fb-eda5-41ba-9d2c-d12765b5067d"),
                 ActiveSinceDate = activeRange.Start,
                 ActiveUntilDate = activeRange.End,
                 Name = "Event Demo 2",
