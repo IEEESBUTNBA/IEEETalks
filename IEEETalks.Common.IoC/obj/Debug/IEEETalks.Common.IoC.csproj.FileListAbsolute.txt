@@ -29,3 +29,10 @@ C:\Users\lightgroup\Documents\IEEE\IEEETalks\IEEETalks.Common.IoC\bin\Debug\Stru
 C:\Users\lightgroup\Documents\IEEE\IEEETalks\IEEETalks.Common.IoC\bin\Debug\StructureMap.Net4.pdb
 C:\Users\lightgroup\Documents\IEEE\IEEETalks\IEEETalks.Common.IoC\obj\Debug\IEEETalks.Common.IoC.dll
 C:\Users\lightgroup\Documents\IEEE\IEEETalks\IEEETalks.Common.IoC\obj\Debug\IEEETalks.Common.IoC.pdb
+C:\Users\Ignacio\Documents\GitHub\IEEETalks\IEEETalks.Common.IoC\bin\Debug\IEEETalks.Common.IoC.dll
+C:\Users\Ignacio\Documents\GitHub\IEEETalks\IEEETalks.Common.IoC\bin\Debug\IEEETalks.Common.IoC.pdb
+C:\Users\Ignacio\Documents\GitHub\IEEETalks\IEEETalks.Common.IoC\bin\Debug\StructureMap.dll
+C:\Users\Ignacio\Documents\GitHub\IEEETalks\IEEETalks.Common.IoC\bin\Debug\StructureMap.Net4.dll
+C:\Users\Ignacio\Documents\GitHub\IEEETalks\IEEETalks.Common.IoC\bin\Debug\StructureMap.pdb
+C:\Users\Ignacio\Documents\GitHub\IEEETalks\IEEETalks.Common.IoC\bin\Debug\StructureMap.xml
+C:\Users\Ignacio\Documents\GitHub\IEEETalks\IEEETalks.Common.IoC\bin\Debug\StructureMap.Net4.pdb
