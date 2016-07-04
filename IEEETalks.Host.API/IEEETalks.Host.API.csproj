@@ -99,7 +99,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\EventsController.cs" />
     <Compile Include="Controllers\InscriptionIntendedController.cs" />
-    <Compile Include="Extensions\ControllerExtensions.cs" />
+    <Compile Include="Extensions\ControllerValidationExtensions.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

@@ -35,10 +35,7 @@ namespace IEEETalks.Host.API.Controllers
 
             var result = _commandBus.Submit(command);
 
-            if (!result.Success)
-            {
-                this.ThrowValidationException(result.ValidationResult);
-            }
+            this.ValidateCommandResult(result);
         }
     }
 }

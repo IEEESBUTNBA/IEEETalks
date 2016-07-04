@@ -17,29 +17,17 @@ namespace IEEETalks.CQS.Infrastructure.Commands
         }
 
         private void ConfigureValidation()
-        {
+        {          
             RuleFor(p => p.InscriptionIntended)
                 .NotNull()
                 .WithMessage("The inscription intended is invalid.");
-            RuleFor(p => p.InscriptionIntended.Email)
-                .NotEmpty()
-                .EmailAddress()
-                .When(p => p.InscriptionIntended != null);
-            RuleFor(p => p.InscriptionIntended.FirstName)
-                .NotEmpty()
-                .When(p => p.InscriptionIntended != null);
-            RuleFor(p => p.InscriptionIntended.LastName)
-                .NotEmpty()
-                .When(p => p.InscriptionIntended != null);
-            RuleFor(p => p.InscriptionIntended.EventId)
-                .NotEmpty()
-                .Must(ExistAndBeActiveEvent)
-                .WithMessage("The event does not exist or is not active.")
+            RuleFor(p => p.InscriptionIntended)
+                .SetValidator(new InscriptionIntendedValidator(_session))
                 .When(p => p.InscriptionIntended != null);
             RuleFor(p => p.InscriptionIntended)
                 .NotEmpty()
                 .Must(NotBeenInscribed)
-                .WithMessage("You are already inscribed for this event.")
+                .WithMessage("You are already inscribed to this event.")
                 .When(p => p.InscriptionIntended != null);
         }
 
@@ -52,6 +40,32 @@ namespace IEEETalks.CQS.Infrastructure.Commands
                         );
 
             return !result;
+        }
+    }
+
+    public class InscriptionIntendedValidator : AbstractValidator<InscriptionIntended>
+    {
+        private readonly ISession _session;
+
+        public InscriptionIntendedValidator(ISession session)
+        {
+            this._session = session;
+            ConfigureValidation();
+        }
+
+        private void ConfigureValidation()
+        {
+            RuleFor(p => p.Email)
+                .NotEmpty()
+                .EmailAddress();
+            RuleFor(p => p.FirstName)
+                .NotEmpty();
+            RuleFor(p => p.LastName)
+                .NotEmpty();
+            RuleFor(p => p.EventId)
+                .NotEmpty()
+                .Must(ExistAndBeActiveEvent)
+                .WithMessage("The event does not exist or is not active.");
         }
 
         private bool ExistAndBeActiveEvent(Guid eventId)
