@@ -7,8 +7,6 @@ namespace IEEETalks.Host.API
     {
         public static void RegisterAll()
         {
-            Container.Current = new StructureMapContainer();
-
             Container.Current.RegisterCQSAll();
         }
     }

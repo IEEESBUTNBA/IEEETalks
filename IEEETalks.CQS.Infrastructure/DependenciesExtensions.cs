@@ -16,18 +16,18 @@ namespace IEEETalks.CQS.Infrastructure
 
         public static void RegisterCQSValidators(this IContainer currentContainer)
         {
-            currentContainer.Register<AbstractValidator<SaveInscriptionIntended>, SaveInscriptionIntendedValidator>();
+            currentContainer.RegisterSingleton<AbstractValidator<SaveInscriptionIntended>, SaveInscriptionIntendedValidator>();
         }
 
         public static void RegisterCQSCommandHandlers(this IContainer currentContainer)
         {
-            currentContainer.Register<ICommandHandler<SaveInscriptionIntended>, SaveInscriptionIntendedHandler>();
+            currentContainer.RegisterSingleton<ICommandHandler<SaveInscriptionIntended>, SaveInscriptionIntendedHandler>();
         }
 
         public static void RegisterCQSSessionAndCommandBus(this IContainer currentContainer)
         {
             currentContainer.Register<ISession, SessionMock>();
-            currentContainer.Register<ICommandBus, CommandBus>();
+            currentContainer.RegisterSingleton<ICommandBus, CommandBus>();
         }
     }
 }
