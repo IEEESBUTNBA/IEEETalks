@@ -19,3 +19,5 @@ build:
 
   verbosity: detailed
 
+before_build:
+  - nuget restore
