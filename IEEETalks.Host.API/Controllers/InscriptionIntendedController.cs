@@ -1,4 +1,5 @@
-﻿using System.Web.Http;
+﻿using System;
+using System.Web.Http;
 using AutoMapper;
 using IEEETalks.Common.IoC;
 using IEEETalks.Core.Entities;
@@ -27,7 +28,7 @@ namespace IEEETalks.Host.API.Controllers
         }
 
         // POST: api/InscriptionIntended
-        public void Post(InscriptionIntendedDto request)
+        public IHttpActionResult Post(InscriptionIntendedDto request)
         {
             var inscriptionIntended = _mapper.Map<InscriptionIntendedDto, InscriptionIntended>(request);
 
@@ -36,6 +37,8 @@ namespace IEEETalks.Host.API.Controllers
             var result = _commandBus.Submit(command);
 
             this.ValidateCommandResult(result);
+
+            return Ok();
         }
     }
 }

@@ -29,3 +29,4 @@ C:\Users\lightgroup\Documents\IEEE\IEEETalks\IEEETalks.Common.IoC\bin\Debug\Stru
 C:\Users\lightgroup\Documents\IEEE\IEEETalks\IEEETalks.Common.IoC\bin\Debug\StructureMap.Net4.pdb
 C:\Users\lightgroup\Documents\IEEE\IEEETalks\IEEETalks.Common.IoC\obj\Debug\IEEETalks.Common.IoC.dll
 C:\Users\lightgroup\Documents\IEEE\IEEETalks\IEEETalks.Common.IoC\obj\Debug\IEEETalks.Common.IoC.pdb
+C:\Users\lightgroup\Documents\IEEE\IEEETalks\IEEETalks.Common.IoC\obj\Debug\IEEETalks.Common.IoC.csprojResolveAssemblyReference.cache
