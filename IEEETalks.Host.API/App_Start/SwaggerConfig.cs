@@ -1,3 +1,6 @@
+using System;
+using System.IO;
+using System.Reflection;
 using System.Web.Http;
 using WebActivatorEx;
 using IEEETalks.Host.API;
@@ -17,8 +20,13 @@ namespace IEEETalks.Host.API
                 .EnableSwagger(c => 
                 {
                     c.SingleApiVersion("v1", "IEEETalks API");
+                    c.DescribeAllEnumsAsStrings();
+                    c.IncludeXmlComments(GetXmlCommentsPath());
                 })
-                .EnableSwaggerUi();
+                .EnableSwaggerUi(c =>
+                {
+                    c.InjectStylesheet(thisAssembly, "IEEETalks.Host.API.SwaggerResources.cutomizations.css");
+                });
 
             //GlobalConfiguration.Configuration 
             //    .EnableSwagger(c =>
@@ -231,6 +239,15 @@ namespace IEEETalks.Host.API
             //            //
             //            //c.EnableOAuth2Support("test-client-id", "test-realm", "Swagger UI");
             //        });
+        }
+
+        private static string GetXmlCommentsPath()
+        {
+            var baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
+            var commentsFileName = Assembly.GetExecutingAssembly().GetName().Name + ".XML";
+            var commentsFile = Path.Combine(baseDirectory, "bin", commentsFileName);
+
+            return commentsFile;
         }
     }
 }
