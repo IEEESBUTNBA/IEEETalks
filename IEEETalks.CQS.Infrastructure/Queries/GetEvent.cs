@@ -1,5 +1,6 @@
 ﻿using System;
 using IEEETalks.Core.Entities;
+using IEEETalks.Persistance;
 
 namespace IEEETalks.CQS.Infrastructure.Queries
 {

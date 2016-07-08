@@ -12,4 +12,3 @@ C:\Users\lightgroup\Documents\IEEE\IEEETalks\IEEETalks.Common.Log\bin\Debug\IEEE
 C:\Users\lightgroup\Documents\IEEE\IEEETalks\IEEETalks.Common.Log\bin\Debug\IEEETalks.Common.Log.pdb
 C:\Users\lightgroup\Documents\IEEE\IEEETalks\IEEETalks.Common.Log\obj\Debug\IEEETalks.Common.Log.dll
 C:\Users\lightgroup\Documents\IEEE\IEEETalks\IEEETalks.Common.Log\obj\Debug\IEEETalks.Common.Log.pdb
-C:\Users\lightgroup\Documents\IEEE\IEEETalks\IEEETalks.Common.Log\obj\Debug\IEEETalks.Common.Log.csprojResolveAssemblyReference.cache

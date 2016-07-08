@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{6B9185D0-E191-4442-885B-C8C62F9F9EA8}</ProjectGuid>
+    <ProjectGuid>{6CD75DF1-AC75-4CDF-885F-053186F95643}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>IEEETalks.CQS.Infrastructure</RootNamespace>
-    <AssemblyName>IEEETalks.CQS.Infrastructure</AssemblyName>
+    <RootNamespace>IEEETalks.Persistance</RootNamespace>
+    <AssemblyName>IEEETalks.Persistance</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,10 +30,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="FluentValidation, Version=6.2.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\FluentValidation.6.2.1.0\lib\Net45\FluentValidation.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="MongoDB.Bson, Version=2.2.4.26, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MongoDB.Bson.2.2.4\lib\net45\MongoDB.Bson.dll</HintPath>
       <Private>True</Private>
@@ -56,21 +52,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CommandProcessor\CommandBus.cs" />
-    <Compile Include="CommandProcessor\CommandHandlerNotFoundException.cs" />
-    <Compile Include="CommandProcessor\CommandResult.cs" />
-    <Compile Include="CommandProcessor\ICommand.cs" />
-    <Compile Include="CommandProcessor\ICommandBus.cs" />
-    <Compile Include="CommandProcessor\ICommandHandler.cs" />
-    <Compile Include="CommandProcessor\ICommandResult.cs" />
-    <Compile Include="Commands\InscriptionIntended\SaveInscriptionIntendedHandler.cs" />
-    <Compile Include="Commands\InscriptionIntended\SaveInscriptionIntendedValidator.cs" />
-    <Compile Include="Commands\InscriptionIntended\SaveInscriptionIntended.cs" />
     <Compile Include="DependenciesExtensions.cs" />
+    <Compile Include="ISession.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Queries\GetEvent.cs" />
-    <Compile Include="Queries\GetActiveEvents.cs" />
-    <Compile Include="Queries\IQuery.cs" />
+    <Compile Include="MongoDbSession.cs" />
+    <Compile Include="InMemorySession.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -81,19 +67,14 @@
       <Name>IEEETalks.Common.IoC</Name>
     </ProjectReference>
     <ProjectReference Include="..\IEEETalks.Common\IEEETalks.Common.csproj">
-      <Project>{8BA36301-8D49-42EA-A49C-9D124E59C72C}</Project>
+      <Project>{8ba36301-8d49-42ea-a49c-9d124e59c72c}</Project>
       <Name>IEEETalks.Common</Name>
     </ProjectReference>
     <ProjectReference Include="..\IEEETalks.Core\IEEETalks.Core.csproj">
       <Project>{c894b274-294c-4b0d-91f1-1766d7bad8c8}</Project>
       <Name>IEEETalks.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\IEEETalks.Persistance\IEEETalks.Persistance.csproj">
-      <Project>{6cd75df1-ac75-4cdf-885f-053186f95643}</Project>
-      <Name>IEEETalks.Persistance</Name>
-    </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -1,5 +1,6 @@
 ﻿using IEEETalks.Common.IoC;
 using IEEETalks.CQS.Infrastructure;
+using IEEETalks.Persistance;
 
 namespace IEEETalks.Host.API
 {
@@ -7,7 +8,9 @@ namespace IEEETalks.Host.API
     {
         public static void RegisterAll()
         {
-            Container.Current.RegisterCQSAll();
+            Container.Current.RegisterPersistanceInMemory();
+
+            Container.Current.RegisterCQS();
         }
     }
 }
