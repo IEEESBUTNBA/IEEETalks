@@ -11,4 +11,4 @@ Core Team: [@IEEESBUTNBA/bugbusters](https://github.com/orgs/IEEESBUTNBA/teams/b
 
 More Info: [Wiki](https://github.com/IEEESBUTNBA/IEEETalks/wiki)
 
-_Copyright &copy; 2016 IEEESBUTNBA Contributors - Provided under the [Apache License, Version 2.0](http://apache.org/licenses/LICENSE-2.0.html).
+_Copyright &copy; 2016 IEEESBUTNBA Contributors - Provided under the [Apache License, Version 2.0](http://apache.org/licenses/LICENSE-2.0.html)._
