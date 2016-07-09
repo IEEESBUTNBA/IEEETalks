@@ -6,4 +6,4 @@ Dev build: [![Build status](https://ci.appveyor.com/api/projects/status/67qi2je0
 
 PM Tool: https://trello.com/b/OwtTARy1
 
-Collaborators: [@IEEESBUTNBA/bugbusters](https://github.com/orgs/IEEESBUTNBA/teams/bugbusters)
+Core Team: [@IEEESBUTNBA/bugbusters](https://github.com/orgs/IEEESBUTNBA/teams/bugbusters)
