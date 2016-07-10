@@ -2,7 +2,6 @@
 using System.Threading;
 using System.Web;
 using System.Web.Http;
-using FluentValidation;
 
 namespace IEEETalks.Host.API
 {

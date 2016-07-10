@@ -2,6 +2,27 @@
 {
     public static class Container
     {
-        public static IContainer Current { get; set; }
+        private static IContainer _current;
+
+        public static IContainer Current
+        {
+            get
+            {
+                if (_current == null)
+                    UseDefault();
+
+                return _current;
+            }
+        }
+
+        public static void UseStructureMap()
+        {
+            _current = new StructureMapContainer();
+        }
+
+        public static void UseDefault()
+        {
+            UseStructureMap();
+        }
     }
 }

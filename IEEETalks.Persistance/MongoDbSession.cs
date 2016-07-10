@@ -4,13 +4,13 @@ using MongoDB.Driver;
 using IEEETalks.Common;
 using MongoDB.Bson;
 
-namespace IEEETalks.CQS.Infrastructure
+namespace IEEETalks.Persistance
 {
-    public class Session : ISession
+    public class MongoDbSession : ISession
     {
         private readonly IMongoDatabase _database;
 
-        public Session(string boundedContext = "IEEETalks-Default")
+        public MongoDbSession(string boundedContext = "IEEETalks-Default")
         {
             var client = new MongoClient(ApplicationSettings.DbConnectionString);
 

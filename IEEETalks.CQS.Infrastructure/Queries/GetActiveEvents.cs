@@ -3,6 +3,7 @@ using System.Linq;
 using IEEETalks.Common;
 using IEEETalks.Core.Entities;
 using IEEETalks.Core.Enums;
+using IEEETalks.Persistance;
 
 namespace IEEETalks.CQS.Infrastructure.Queries
 {

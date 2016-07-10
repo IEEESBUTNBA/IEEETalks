@@ -2,7 +2,7 @@
 
 namespace IEEETalks.Common.IoC
 {
-    public class StructureMapContainer : IContainer
+    internal class StructureMapContainer : IContainer
     {
         private readonly StructureMap.Container _container = new StructureMap.Container();
 

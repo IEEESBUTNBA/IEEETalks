@@ -5,14 +5,14 @@ using IEEETalks.Common;
 using IEEETalks.Core.Entities;
 using IEEETalks.Core.Enums;
 
-namespace IEEETalks.CQS.Infrastructure
+namespace IEEETalks.Persistance
 {
-    public class SessionMock : ISession
+    public class InMemorySession : ISession
     {
         private readonly string _boundedContext;
         private static Dictionary<string, List<dynamic>> _collections;
 
-        public SessionMock(string boundedContext = "IEEETalks-Default")
+        public InMemorySession(string boundedContext = "IEEETalks-Default")
         {
             _boundedContext = boundedContext;
             if (_collections == null)
@@ -69,8 +69,8 @@ namespace IEEETalks.CQS.Infrastructure
         public T GetById<T>(Guid id)
         {
             var result = (from x in _collections[typeof(T).Name]
-                        where x.Id == id
-                        select x).FirstOrDefault();
+                          where x.Id == id
+                          select x).FirstOrDefault();
 
             return result;
         }
