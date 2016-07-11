@@ -1,170 +1,92 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using IEEETalks.Common;
-using IEEETalks.Core.Entities;
-using IEEETalks.Core.Enums;
 
 namespace IEEETalks.Persistance
 {
     public class InMemorySession : ISession
     {
         private readonly string _boundedContext;
-        private static Dictionary<string, List<dynamic>> _collections;
+        private static Dictionary<string, Dictionary<string, dynamic>> _collections;
 
         public InMemorySession(string boundedContext = "IEEETalks-Default")
         {
             _boundedContext = boundedContext;
             if (_collections == null)
             {
-                _collections = new Dictionary<string, List<dynamic>>
-                {
-                    {
-                        typeof(Event).Name, GetAllInMemory().Cast<dynamic>().ToList()
-                    },
-                    {
-                        typeof(InscriptionIntended).Name, (new List<InscriptionIntended>()).Cast<dynamic>().ToList()
-                    }
-                };
+                _collections = new Dictionary<string, Dictionary<string, dynamic>>();
             }
+        }
+
+        private void EnsureCollectionExist<T>()
+        {
+            var exist = _collections.ContainsKey(GetCollectionName<T>());
+            if (!exist)
+                _collections.Add(GetCollectionName<T>(), new Dictionary<string, dynamic>());
+        }
+
+        public string GetCollectionName<T>()
+        {
+            return _boundedContext + "_" + typeof(T).Name;
         }
 
         public void Store<T>(string id, T item)
         {
-            Store<T>(new Guid(id), item);
-        }
+            this.EnsureCollectionExist<T>();
 
-        public void Store<T>(Guid id, T item)
-        {
-            var result = (from x in _collections[typeof(T).Name]
-                          where x.Id == id
-                          select x).FirstOrDefault();
+            var result = (from x in _collections[GetCollectionName<T>()]
+                          where x.Key == id
+                          select x.Value).FirstOrDefault();
 
             if (result != null)
                 this.Remove<T>(result.Id);
 
-            _collections[typeof(T).Name].Add(item);
+            _collections[GetCollectionName<T>()].Add(id, item);
+        }
+
+        public void Store<T>(Guid id, T item)
+        {
+            Store<T>(id.ToString(), item);
         }
 
         public void Remove<T>(string id)
         {
-            Remove<T>(new Guid(id));
+            this.EnsureCollectionExist<T>();
+
+            var result = (from x in _collections[GetCollectionName<T>()]
+                          where x.Key == id
+                          select x.Value).FirstOrDefault();
+
+            if (result != null)
+                _collections[GetCollectionName<T>()].Remove(result);
         }
 
         public void Remove<T>(Guid id)
         {
-            var result = (from x in _collections[typeof(T).Name]
-                          where x.Id == id
-                          select x).FirstOrDefault();
-
-            if (result != null)
-                _collections[typeof(T).Name].Remove(result);
+            Remove<T>(id.ToString());
         }
 
         public T GetById<T>(string id)
         {
-            return GetById<T>(new Guid(id));
-        }
+            this.EnsureCollectionExist<T>();
 
-        public T GetById<T>(Guid id)
-        {
-            var result = (from x in _collections[typeof(T).Name]
-                          where x.Id == id
-                          select x).FirstOrDefault();
+            var result = (from x in _collections[GetCollectionName<T>()]
+                          where x.Key == id
+                          select x.Value).FirstOrDefault();
 
             return result;
         }
 
-        public IQueryable<T> GetQueryable<T>()
+        public T GetById<T>(Guid id)
         {
-            return _collections[typeof(T).Name].Cast<T>().AsQueryable();
+            return GetById<T>(id.ToString());
         }
 
-        private List<Event> GetAllInMemory()
+        public IQueryable<T> GetQueryable<T>()
         {
-            var list = new List<Event>();
-            var activeRange = DateTimeRange.CreateOneWeekRange(DateTime.Today.AddDays(-5));
+            this.EnsureCollectionExist<T>();
 
-            var eventDates = new List<EventDate>
-            {
-                new EventDate()
-                {
-                    Date = DateTime.Today,
-                    StartAt = new TimeSpan(0, 10, 0, 0),
-                    EndAt = new TimeSpan(0, 14, 0, 0)
-                },
-                new EventDate()
-                {
-                    Date = DateTime.Today.AddDays(1),
-                    StartAt = new TimeSpan(0, 10, 0, 0),
-                    EndAt = new TimeSpan(0, 14, 0, 0)
-                },
-            };
-
-            list.Add(new Event()
-            {
-                Id = new Guid("20133f6d-5356-4ed2-b0fa-75dc73646499"),
-                ActiveSinceDate = activeRange.Start,
-                ActiveUntilDate = activeRange.End,
-                Name = "Event Demo 1",
-                Summary = "Summary demo 1",
-                Description = "Description demo 1",
-                EventDates = eventDates,
-                Price = 250,
-                Quota = 100,
-                EventState = EventState.Active,
-                Location = "UTN.BA (Medrano 951) - Aula Magna",
-                Image = "../img/ieee[3].jpg"
-            });
-
-            list.Add(new Event()
-            {
-                Id = new Guid("1aac76fb-eda5-41ba-9d2c-d12765b5067d"),
-                ActiveSinceDate = activeRange.Start,
-                ActiveUntilDate = activeRange.End,
-                Name = "Event Demo 2",
-                Summary = "Summary demo 2",
-                Description = "Description demo 2",
-                EventDates = eventDates,
-                Price = 120,
-                Quota = 100,
-                EventState = EventState.Active,
-                Location = "UTN.BA (Medrano 951) - Aula Magna",
-                Image = "../img/14474300157302[1].jpg"
-            });
-
-            list.Add(new Event()
-            {
-                Id = Guid.NewGuid(),
-                ActiveSinceDate = activeRange.Start,
-                ActiveUntilDate = activeRange.End,
-                Name = "Event Demo 3",
-                Summary = "Summary demo 3",
-                Description = "Description demo 3",
-                EventDates = eventDates,
-                Price = 100,
-                Quota = 100,
-                EventState = EventState.Active,
-                Location = "UTN.BA (Medrano 951) - Aula Magna",
-                Image = "../img/ieee_ar_kite_azul_v[1].png"
-            });
-            list.Add(new Event()
-            {
-                Id = Guid.NewGuid(),
-                ActiveSinceDate = activeRange.Start,
-                ActiveUntilDate = activeRange.End,
-                Name = "Event Demo 4",
-                Summary = "Summary demo 4",
-                Description = "Description demo 4",
-                EventDates = eventDates,
-                Price = 100,
-                Quota = 100,
-                EventState = EventState.Active,
-                Location = "UTN.BA (Medrano 951) - Aula Magna",
-                Image = "../img/14474300157302[1].jpg"
-            });
-
-            return list;
+            return _collections[GetCollectionName<T>()].Cast<T>().AsQueryable();
         }
     }
 }

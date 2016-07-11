@@ -52,7 +52,7 @@ namespace IEEETalks.Persistance
             return GetById<T>(id.ToString());
         }
 
-        private string GetCollectionName<T>()
+        public string GetCollectionName<T>()
         {
             return typeof(T).Name;
         }
