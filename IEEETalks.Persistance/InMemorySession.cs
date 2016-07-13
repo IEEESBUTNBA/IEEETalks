@@ -86,7 +86,7 @@ namespace IEEETalks.Persistance
         {
             this.EnsureCollectionExist<T>();
 
-            return _collections[GetCollectionName<T>()].Cast<T>().AsQueryable();
+            return _collections[GetCollectionName<T>()].Values.Cast<T>().AsQueryable();
         }
     }
 }

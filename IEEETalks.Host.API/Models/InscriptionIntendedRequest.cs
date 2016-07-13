@@ -2,7 +2,7 @@
 
 namespace IEEETalks.Host.API.Models
 {
-    public class InscriptionIntendedDto
+    public class InscriptionIntendedRequest
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }

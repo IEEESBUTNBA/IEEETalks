@@ -25,7 +25,7 @@ namespace IEEETalks.Host.API.Controllers
 
             var mapperConfiguration = new MapperConfiguration(cfg =>
             {
-                cfg.CreateMap<Event, EventDto>()
+                cfg.CreateMap<Event, GetEventResponse>()
                     .ForMember(dest => dest.EventDate, opt => opt.MapFrom(ol => ol.GetFirstEventDate()));
             });
 
@@ -33,28 +33,28 @@ namespace IEEETalks.Host.API.Controllers
         }
 
         // GET: api/Events
-        public GetEventsResponse Get()
+        public GetEventsPagedResponse Get([FromUri]GetEventsPagedRequest request)
         {
-            // TODO: add logic to paginate.
-            var result = _getActiveEventsQuery.Run(0, 100);
+            request = request ?? new GetEventsPagedRequest();
 
-            var response = new GetEventsResponse
+            var result = _getActiveEventsQuery.Run(request.CurrentPage * request.PageSize, request.PageSize);
+
+            var response = new GetEventsPagedResponse
             {
-                Items = _mapper.Map<List<Event>, List<EventDto>>(result.Items),
-                TotalRecords = result.TotalRecords
+                Items = _mapper.Map<List<Event>, List<GetEventResponse>>(result.Items),
+                TotalRecords = result.TotalRecords,
+                HasMore = request.HasMore(result.TotalRecords)
             };
 
             return response;
         }
 
         // GET: api/Events/{id}
-        public EventDto Get(Guid id)
+        public GetEventResponse Get(Guid id)
         {
             var result = _getEventQuery.Run(id);
 
-            var response = _mapper.Map<Event, EventDto>(result);
-
-            this.ValidateNull(response, $"The event is not found (id: {id})");
+            var response = _mapper.Map<Event, GetEventResponse>(result);
 
             return response;
         }

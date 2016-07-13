@@ -6,7 +6,7 @@ namespace IEEETalks.Common
     {
         public DateTimeRange(DateTime start, DateTime end)
         {
-            Guard.ForDateRange(start, end, "start");
+            Guard.ForDateRange(start, end, "start", "Date rage is not valid.");
             Start = start;
             End = end;
         }
