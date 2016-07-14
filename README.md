@@ -1,5 +1,7 @@
 # IEEETalks
 
+[![Join the chat at https://gitter.im/IEEESBUTNBA/IEEETalks](https://badges.gitter.im/IEEESBUTNBA/IEEETalks.svg)](https://gitter.im/IEEESBUTNBA/IEEETalks?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Branch  | AppVeyor
 ------------- | -------------
 master | [![Build status](https://ci.appveyor.com/api/projects/status/67qi2je0d0gb6g5t/branch/master?svg=true)](https://ci.appveyor.com/project/chescalante/ieeetalks/branch/master)
