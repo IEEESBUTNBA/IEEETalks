@@ -1,6 +1,7 @@
 ﻿using System.Linq;
 using System.Net.Http.Formatting;
 using System.Web.Http;
+using IEEETalks.Host.API.Filters;
 using Newtonsoft.Json.Serialization;
 
 namespace IEEETalks.Host.API
@@ -17,6 +18,9 @@ namespace IEEETalks.Host.API
             //};
             //config.Services.Replace(typeof(IContentNegotiator), new JsonContentNegotiator(jsonFormatter));
             // ** NOT WORKING WITH SWAGGER **
+
+            // Filter exceptions configuration
+            config.Filters.Add(new ExceptionHandlerFilterAttribute());
 
             // Web API configuration and services
             config.Formatters.XmlFormatter.SupportedMediaTypes.Clear();

@@ -5,6 +5,7 @@ namespace IEEETalks.Persistance
 {
     public interface ISession
     {
+        string GetCollectionName<T>();
         void Store<T>(string id, T item);
         void Store<T>(Guid id, T item);
         void Remove<T>(string id);

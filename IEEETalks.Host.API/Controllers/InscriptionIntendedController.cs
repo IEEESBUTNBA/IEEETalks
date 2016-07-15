@@ -1,5 +1,4 @@
-﻿using System;
-using System.Web.Http;
+﻿using System.Web.Http;
 using AutoMapper;
 using IEEETalks.Common.IoC;
 using IEEETalks.Core.Entities;
@@ -20,7 +19,7 @@ namespace IEEETalks.Host.API.Controllers
 
             var mapperConfiguration = new MapperConfiguration(cfg =>
             {
-                cfg.CreateMap<InscriptionIntendedDto, InscriptionIntended>();
+                cfg.CreateMap<InscriptionIntendedRequest, InscriptionIntended>();
             });
 
             _mapper = mapperConfiguration.CreateMapper();
@@ -28,15 +27,13 @@ namespace IEEETalks.Host.API.Controllers
         }
 
         // POST: api/InscriptionIntended
-        public IHttpActionResult Post(InscriptionIntendedDto request)
+        public IHttpActionResult Post(InscriptionIntendedRequest request)
         {
-            var inscriptionIntended = _mapper.Map<InscriptionIntendedDto, InscriptionIntended>(request);
+            var inscriptionIntended = _mapper.Map<InscriptionIntendedRequest, InscriptionIntended>(request);
 
             var command = new SaveInscriptionIntended(inscriptionIntended);
 
-            var result = _commandBus.Submit(command);
-
-            this.ValidateCommandResult(result);
+            _commandBus.Submit(command);
 
             return Ok();
         }
