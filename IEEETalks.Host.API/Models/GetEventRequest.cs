@@ -3,7 +3,12 @@ using System;
 
 namespace IEEETalks.Host.API.Models
 {
-    public class EventDto
+    //public class GetEventRequest
+    //{
+    //    public Guid Id { get; set; }
+    //}
+
+    public class GetEventResponse
     {
         public Guid Id { get; set; }
         public int EntityId { get; set; }
