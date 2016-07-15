@@ -1,8 +1,3 @@
-C:\Users\Ignacio\Documents\GitHub\IEEETalks\IEEETalks.Common.Log\bin\Debug\IEEETalks.Common.Log.dll
-C:\Users\Ignacio\Documents\GitHub\IEEETalks\IEEETalks.Common.Log\bin\Debug\IEEETalks.Common.Log.pdb
-C:\Users\Ignacio\Documents\GitHub\IEEETalks\IEEETalks.Common.Log\obj\Debug\IEEETalks.Common.Log.dll
-C:\Users\Ignacio\Documents\GitHub\IEEETalks\IEEETalks.Common.Log\obj\Debug\IEEETalks.Common.Log.pdb
-C:\Users\Ignacio\Documents\GitHub\IEEETalks\IEEETalks.Common.Log\obj\Debug\IEEETalks.Common.Log.csprojResolveAssemblyReference.cache
 C:\Users\Dana\Source\Repos\IEEETalks\IEEETalks.Common.Log\bin\Debug\IEEETalks.Common.Log.dll
 C:\Users\Dana\Source\Repos\IEEETalks\IEEETalks.Common.Log\bin\Debug\IEEETalks.Common.Log.pdb
 C:\Users\Dana\Source\Repos\IEEETalks\IEEETalks.Common.Log\obj\Debug\IEEETalks.Common.Log.csprojResolveAssemblyReference.cache
@@ -13,3 +8,7 @@ C:\Users\lightgroup\Documents\IEEE\IEEETalks\IEEETalks.Common.Log\bin\Debug\IEEE
 C:\Users\lightgroup\Documents\IEEE\IEEETalks\IEEETalks.Common.Log\obj\Debug\IEEETalks.Common.Log.csprojResolveAssemblyReference.cache
 C:\Users\lightgroup\Documents\IEEE\IEEETalks\IEEETalks.Common.Log\obj\Debug\IEEETalks.Common.Log.dll
 C:\Users\lightgroup\Documents\IEEE\IEEETalks\IEEETalks.Common.Log\obj\Debug\IEEETalks.Common.Log.pdb
+C:\Users\Ignacio\Documents\GitHub\IEEETalks\IEEETalks.Common.Log\bin\Debug\IEEETalks.Common.Log.dll
+C:\Users\Ignacio\Documents\GitHub\IEEETalks\IEEETalks.Common.Log\bin\Debug\IEEETalks.Common.Log.pdb
+C:\Users\Ignacio\Documents\GitHub\IEEETalks\IEEETalks.Common.Log\obj\Debug\IEEETalks.Common.Log.dll
+C:\Users\Ignacio\Documents\GitHub\IEEETalks\IEEETalks.Common.Log\obj\Debug\IEEETalks.Common.Log.pdb
