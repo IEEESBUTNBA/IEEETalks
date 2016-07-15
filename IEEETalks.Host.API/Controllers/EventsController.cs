@@ -6,9 +6,11 @@ using IEEETalks.Common.IoC;
 using IEEETalks.Core.Entities;
 using IEEETalks.CQS.Infrastructure.Queries;
 using IEEETalks.Host.API.Models;
+using System.Web.Http.Cors;
 
 namespace IEEETalks.Host.API.Controllers
 {
+    [EnableCorsAttribute("http://localhost:56951","*","*")]
     public class EventsController : ApiController
     {
         //private readonly ICommandBus _commandBus;

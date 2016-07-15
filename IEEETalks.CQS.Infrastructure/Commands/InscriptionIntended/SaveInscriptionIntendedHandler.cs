@@ -1,4 +1,5 @@
 ﻿using IEEETalks.CQS.Infrastructure.CommandProcessor;
+using IEEETalks.Persistance;
 
 namespace IEEETalks.CQS.Infrastructure.Commands
 {

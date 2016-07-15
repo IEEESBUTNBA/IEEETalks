@@ -67,13 +67,10 @@
     <Compile Include="Commands\InscriptionIntended\SaveInscriptionIntendedValidator.cs" />
     <Compile Include="Commands\InscriptionIntended\SaveInscriptionIntended.cs" />
     <Compile Include="DependenciesExtensions.cs" />
-    <Compile Include="ISession.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Queries\GetEvent.cs" />
     <Compile Include="Queries\GetActiveEvents.cs" />
     <Compile Include="Queries\IQuery.cs" />
-    <Compile Include="Session.cs" />
-    <Compile Include="SessionMock.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -90,6 +87,10 @@
     <ProjectReference Include="..\IEEETalks.Core\IEEETalks.Core.csproj">
       <Project>{c894b274-294c-4b0d-91f1-1766d7bad8c8}</Project>
       <Name>IEEETalks.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IEEETalks.Persistance\IEEETalks.Persistance.csproj">
+      <Project>{6cd75df1-ac75-4cdf-885f-053186f95643}</Project>
+      <Name>IEEETalks.Persistance</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />
