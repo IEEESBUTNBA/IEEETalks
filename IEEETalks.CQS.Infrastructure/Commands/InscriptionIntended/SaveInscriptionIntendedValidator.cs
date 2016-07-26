@@ -28,7 +28,7 @@ namespace IEEETalks.CQS.Infrastructure.Commands
             RuleFor(p => p.InscriptionIntended)
                 .NotEmpty()
                 .Must(NotBeenInscribed)
-                .WithMessage("You are already inscribed to this event.")
+                .WithMessage("You are already  signed up for  this event.")
                 .When(p => p.InscriptionIntended != null);
         }
 
