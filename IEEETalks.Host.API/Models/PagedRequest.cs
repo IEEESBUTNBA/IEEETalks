@@ -5,6 +5,6 @@ namespace IEEETalks.Host.API.Models
         public virtual int PageSize => 20;
         public int CurrentPage { get; set; }
 
-        public bool HasMore(int totalRecords) => PageSize*CurrentPage < totalRecords;
+        public bool HasMore(int totalRecords) => PageSize*(CurrentPage + 1) < totalRecords;
     }
 }
