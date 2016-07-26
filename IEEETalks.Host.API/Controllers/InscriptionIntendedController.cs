@@ -5,9 +5,11 @@ using IEEETalks.Core.Entities;
 using IEEETalks.CQS.Infrastructure.CommandProcessor;
 using IEEETalks.CQS.Infrastructure.Commands;
 using IEEETalks.Host.API.Models;
+using System.Web.Http.Cors;
 
 namespace IEEETalks.Host.API.Controllers
 {
+    [EnableCors("http://localhost:56951", "*", "*")]
     public class InscriptionIntendedController : ApiController
     {
         private readonly ICommandBus _commandBus;
@@ -27,6 +29,7 @@ namespace IEEETalks.Host.API.Controllers
         }
 
         // POST: api/InscriptionIntended
+        [HttpPost]
         public IHttpActionResult Post(InscriptionIntendedRequest request)
         {
             var inscriptionIntended = _mapper.Map<InscriptionIntendedRequest, InscriptionIntended>(request);
