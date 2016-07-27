@@ -13,4 +13,18 @@ dev | [![Build status](https://ci.appveyor.com/api/projects/status/67qi2je0d0gb6
 
 **More Info:** [Wiki](https://github.com/IEEESBUTNBA/IEEETalks/wiki)
 
+--
+
+###OSS Libraries Used
+_This project includes the great libraries listed below for some of its core functionality. Each library is released under its respective licence:_
+
+* [FluentValidation](https://github.com/JeremySkinner/FluentValidation)
+* [AutoMapper](https://github.com/AutoMapper/AutoMapper)
+* [Newtonsoft.Json](https://github.com/JamesNK/Newtonsoft.Json)
+* [Swashbuckle](https://github.com/domaindrivendev/Swashbuckle)
+* [StructureMap](https://github.com/structuremap/structuremap)
+* [Mongo-CSharp-Driver](https://github.com/mongodb/mongo-csharp-driver)
+
+--
+
 _Copyright &copy; 2016 IEEESBUTNBA Contributors - Provided under the [Apache License, Version 2.0](http://apache.org/licenses/LICENSE-2.0.html)._
