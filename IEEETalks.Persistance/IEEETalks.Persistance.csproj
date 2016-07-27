@@ -59,9 +59,6 @@
     <Compile Include="InMemorySession.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\IEEETalks.Common.IoC\IEEETalks.Common.IoC.csproj">
       <Project>{86ee48f4-824d-42df-9101-b42668dcacfb}</Project>
       <Name>IEEETalks.Common.IoC</Name>
@@ -74,6 +71,9 @@
       <Project>{c894b274-294c-4b0d-91f1-1766d7bad8c8}</Project>
       <Name>IEEETalks.Core</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
