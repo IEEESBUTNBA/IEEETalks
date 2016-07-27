@@ -6,10 +6,9 @@ namespace IEEETalks.Common.IoC
     {
         void Register<TInterface, TImplementation>() where TImplementation : TInterface;
         void RegisterSingleton<TInterface, TImplementation>() where TImplementation : TInterface;
-        void Register<TInterface>(TInterface implementation) where TInterface : class, IDisposable;
+        void Register<TInterface>(TInterface implementation) where TInterface : class;
         bool HasImplementationsFor<TImplementation>();
         TInterface Resolve<TInterface>();
         TInterface ResolveWithArguments<TInterface>(CtorArgs arguments);
-        TInterface Inject<TInterface>(TInterface toInject) where TInterface : class;
     }
 }

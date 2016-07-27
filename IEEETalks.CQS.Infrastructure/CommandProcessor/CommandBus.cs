@@ -25,11 +25,8 @@ namespace IEEETalks.CQS.Infrastructure.CommandProcessor
         public ValidationResult Validate<TCommand>(TCommand command) where TCommand : ICommand
         {
             var handler = Container.Current.Resolve<AbstractValidator<TCommand>>();
-            if (handler != null)
-            {
-                return handler.Validate(command);
-            }
-            return new ValidationResult();
+
+            return handler != null ? handler.Validate(command) : new ValidationResult();
         }
     }
 }
