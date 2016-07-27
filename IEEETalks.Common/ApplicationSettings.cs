@@ -17,5 +17,6 @@ namespace IEEETalks.Common
         public static string ContextDirectory => Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), ApplicationName);
 
         public static string DbConnectionString => "mongodb://localhost:27017";
+        public static string AcceptedOriginRequestsUrl => "http://localhost:56951";
     }
 }

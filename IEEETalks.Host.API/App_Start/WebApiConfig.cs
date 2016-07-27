@@ -1,6 +1,8 @@
 ﻿using System.Linq;
 using System.Net.Http.Formatting;
 using System.Web.Http;
+using System.Web.Http.Cors;
+using IEEETalks.Common;
 using IEEETalks.Host.API.Filters;
 using Newtonsoft.Json.Serialization;
 
@@ -10,14 +12,8 @@ namespace IEEETalks.Host.API
     {
         public static void Register(HttpConfiguration config)
         {
-            config.EnableCors();
-            // ** NOT WORKING WITH SWAGGER **
-            //var jsonFormatter = new JsonMediaTypeFormatter
-            //{
-            //    SerializerSettings = {ContractResolver = new CamelCasePropertyNamesContractResolver()}
-            //};
-            //config.Services.Replace(typeof(IContentNegotiator), new JsonContentNegotiator(jsonFormatter));
-            // ** NOT WORKING WITH SWAGGER **
+            // Enable cross origin, only for accepted url (front-end website url)
+            config.EnableCors(new EnableCorsAttribute(ApplicationSettings.AcceptedOriginRequestsUrl, "*", "*"));
 
             // Filter exceptions configuration
             config.Filters.Add(new ExceptionHandlerFilterAttribute());

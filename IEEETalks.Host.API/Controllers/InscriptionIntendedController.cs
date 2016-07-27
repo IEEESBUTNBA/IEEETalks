@@ -9,7 +9,6 @@ using System.Web.Http.Cors;
 
 namespace IEEETalks.Host.API.Controllers
 {
-    [EnableCors("http://localhost:56951", "*", "*")]
     public class InscriptionIntendedController : ApiController
     {
         private readonly ICommandBus _commandBus;
