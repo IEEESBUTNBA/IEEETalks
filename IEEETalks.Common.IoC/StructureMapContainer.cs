@@ -16,10 +16,9 @@ namespace IEEETalks.Common.IoC
             _container.Configure(x => x.For<TInterface>().Singleton().Use<TImplementation>());
         }
 
-        public void Register<TInterface>(TInterface implementation) where TInterface : class, IDisposable
+        public void Register<TInterface>(TInterface implementation) where TInterface : class
         {
             _container.Inject(implementation);
-            //container.Configure(x => x.For<TInterface>().Use(() => implementation));
         }
 
         public TInterface Resolve<TInterface>()
@@ -34,30 +33,6 @@ namespace IEEETalks.Common.IoC
             }
         }
 
-        //public TInterface ResolveWithArguments<TInterface>(params object[] arguments)
-        //{
-        //    try
-        //    {
-        //        var kernelTarget = container.TryGetInstance<TInterface>();
-
-        //        Type implementationType = (Type)kernelTarget.GetType().GetField("prototype").GetValue(kernelTarget);
-        //        var constructor = implementationType.GetConstructor(arguments.Select(arg => arg.GetType()).ToArray());
-
-        //        var constructorArguments = new StructureMap.Pipeline.ExplicitArguments();
-        //        int i = 0;
-        //        foreach (var parameter in constructor.GetParameters())
-        //        {
-        //            constructorArguments.SetArg(parameter.Name, arguments[i++]);
-        //        }
-
-        //        return container.GetInstance<TInterface>(constructorArguments);
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        throw new ContainerException(ex);
-        //    }
-        //}
-
         public TInterface ResolveWithArguments<TInterface>(CtorArgs arguments)
         {
             try
@@ -69,13 +44,6 @@ namespace IEEETalks.Common.IoC
                 throw new ContainerException(ex);
             }
         }
-
-        public TInterface Inject<TInterface>(TInterface toInject) where TInterface : class
-        {
-            _container.Inject(toInject);
-            return toInject;
-        }
-
 
         public bool HasImplementationsFor<TImplementation>()
         {

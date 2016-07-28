@@ -18,6 +18,7 @@
         public static void UseStructureMap()
         {
             _current = new StructureMapContainer();
+            _current.Register(_current);
         }
 
         public static void UseDefault()
