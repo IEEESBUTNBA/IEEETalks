@@ -24,6 +24,7 @@ _This project includes the great libraries listed below for some of its core fun
 * [Swashbuckle](https://github.com/domaindrivendev/Swashbuckle)
 * [StructureMap](https://github.com/structuremap/structuremap)
 * [Mongo-CSharp-Driver](https://github.com/mongodb/mongo-csharp-driver)
+* [MediatR](https://github.com/jbogard/MediatR)
 
 --
 
