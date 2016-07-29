@@ -2,6 +2,7 @@
 using System.Threading;
 using System.Web;
 using System.Web.Http;
+using IEEETalks.Common;
 
 namespace IEEETalks.Host.API
 {
@@ -13,8 +14,12 @@ namespace IEEETalks.Host.API
             Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo("en-US");
             FluentValidation.Resources.Messages.Culture = CultureInfo.GetCultureInfo("en-US");
 
-            DependenciesConfig.RegisterAll();
-            GlobalConfiguration.Configure(WebApiConfig.Register);
+            GlobalConfiguration.Configure(config =>
+            {
+                IApplicationSettings applicationSettings;
+                DependenciesConfig.Register(config, out applicationSettings);
+                WebApiConfig.Register(config, applicationSettings);
+            });
         }
     }
 }

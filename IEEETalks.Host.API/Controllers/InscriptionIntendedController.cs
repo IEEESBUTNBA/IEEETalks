@@ -1,30 +1,29 @@
 ﻿using System.Web.Http;
 using AutoMapper;
-using IEEETalks.Common.IoC;
 using IEEETalks.Core.Entities;
-using IEEETalks.CQS.Infrastructure.CommandProcessor;
-using IEEETalks.CQS.Infrastructure.Commands;
 using IEEETalks.Host.API.Models;
-using System.Web.Http.Cors;
+using IEEETalks.CQRS.Commands;
+using MediatR;
 
 namespace IEEETalks.Host.API.Controllers
 {
+    public class InscriptionIntendedControllerProfile : Profile
+    {
+        public InscriptionIntendedControllerProfile()
+        {
+            CreateMap<InscriptionIntendedRequest, InscriptionIntended>();
+        }
+    }
+
     public class InscriptionIntendedController : ApiController
     {
-        private readonly ICommandBus _commandBus;
+        private readonly IMediator _mediator;
         private readonly IMapper _mapper;
 
-        public InscriptionIntendedController()
+        public InscriptionIntendedController(IMediator mediator, IMapper mapper)
         {
-            _commandBus = Container.Current.Resolve<ICommandBus>();
-
-            var mapperConfiguration = new MapperConfiguration(cfg =>
-            {
-                cfg.CreateMap<InscriptionIntendedRequest, InscriptionIntended>();
-            });
-
-            _mapper = mapperConfiguration.CreateMapper();
-
+            _mediator = mediator;
+            _mapper = mapper;
         }
 
         // POST: api/InscriptionIntended
@@ -33,9 +32,7 @@ namespace IEEETalks.Host.API.Controllers
         {
             var inscriptionIntended = _mapper.Map<InscriptionIntendedRequest, InscriptionIntended>(request);
 
-            var command = new SaveInscriptionIntended(inscriptionIntended);
-
-            _commandBus.Submit(command);
+            _mediator.Send(new SaveInscriptionIntended(inscriptionIntended));
 
             return Ok();
         }
