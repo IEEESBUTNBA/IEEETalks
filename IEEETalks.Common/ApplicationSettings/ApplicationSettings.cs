@@ -19,6 +19,6 @@ namespace IEEETalks.Common
         public string DbConnectionString => "mongodb://localhost:27017";
         public string DbName => "IEEETalks-Default";
 
-        public string AcceptedOriginRequestsUrl => "http://localhost:56951";
+        public string AcceptedOriginRequestsUrl => "*";
     }
 }

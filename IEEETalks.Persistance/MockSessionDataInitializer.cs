@@ -110,7 +110,7 @@ namespace IEEETalks.Persistance
             var rd = new Random();
             string[] pics = new string[] { "../img/14474300157302[1].jpg", "../img/ieee_ar_kite_azul_v[1].png", "../img/ieee[3].jpg" };
 
-            for (int i = 0; i < 100; i++)
+            for (int i = 0; i < 300; i++)
             {
                 list.Add(new Event()
                 {
@@ -125,7 +125,7 @@ namespace IEEETalks.Persistance
                     Quota = 100,
                     EventState = EventState.Active,
                     Location = "UTN.BA (Medrano 951) - Aula Magna",
-                    Image = pics[rd.Next(2)]
+                    Image = pics[rd.Next(3)]
                 });
             }
             return list;
