@@ -78,7 +78,7 @@ namespace IEEETalks.Persistance
 
             list.Add(new Event()
             {
-                Id = Guid.NewGuid(),
+                Id = new Guid("20133f6d-5356-4ed2-b0fa-75dc73646498"),
                 ActiveSinceDate = activeRange.Start,
                 ActiveUntilDate = activeRange.End,
                 Name = "Event Demo 3",
@@ -93,7 +93,7 @@ namespace IEEETalks.Persistance
             });
             list.Add(new Event()
             {
-                Id = Guid.NewGuid(),
+                Id = new Guid("1aac76fb-eda5-41ba-9d2c-d12765b50673"),
                 ActiveSinceDate = activeRange.Start,
                 ActiveUntilDate = activeRange.End,
                 Name = "Event Demo 4",
@@ -107,6 +107,27 @@ namespace IEEETalks.Persistance
                 Image = "../img/14474300157302[1].jpg"
             });
 
+            var rd = new Random();
+            string[] pics = new string[] { "../img/14474300157302[1].jpg", "../img/ieee_ar_kite_azul_v[1].png", "../img/ieee[3].jpg" };
+
+            for (int i = 0; i < 100; i++)
+            {
+                list.Add(new Event()
+                {
+                    Id = Guid.NewGuid(),
+                    ActiveSinceDate = activeRange.Start,
+                    ActiveUntilDate = activeRange.End,
+                    Name = "Event Demo "+(i+4).ToString(),
+                    Summary = "Summary demo 4",
+                    Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+                    EventDates = eventDates,
+                    Price = 100,
+                    Quota = 100,
+                    EventState = EventState.Active,
+                    Location = "UTN.BA (Medrano 951) - Aula Magna",
+                    Image = pics[rd.Next(2)]
+                });
+            }
             return list;
         }
 
