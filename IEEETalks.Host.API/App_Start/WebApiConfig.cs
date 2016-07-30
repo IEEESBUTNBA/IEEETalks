@@ -10,10 +10,12 @@ namespace IEEETalks.Host.API
 {
     public static class WebApiConfig
     {
-        public static void Register(HttpConfiguration config)
+        public static void Register(HttpConfiguration config, IApplicationSettings applicationSettings)
         {
+            //config.DependencyResolver = new ContainerDependencyResolver();
+
             // Enable cross origin, only for accepted url (front-end website url)
-            config.EnableCors(new EnableCorsAttribute(ApplicationSettings.AcceptedOriginRequestsUrl, "*", "*"));
+            config.EnableCors(new EnableCorsAttribute(applicationSettings.AcceptedOriginRequestsUrl, "*", "*"));
 
             // Filter exceptions configuration
             config.Filters.Add(new ExceptionHandlerFilterAttribute());

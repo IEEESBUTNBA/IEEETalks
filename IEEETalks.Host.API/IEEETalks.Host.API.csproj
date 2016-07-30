@@ -33,7 +33,8 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\IEEETalks.Host.API.XML</DocumentationFile>
+    <DocumentationFile>
+    </DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -52,6 +53,10 @@
       <HintPath>..\packages\FluentValidation.6.2.1.0\lib\Net45\FluentValidation.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="MediatR, Version=2.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MediatR.2.1.0\lib\net45\MediatR.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
       <Private>True</Private>
@@ -63,6 +68,14 @@
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="StructureMap, Version=4.2.0.402, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\structuremap.4.2.0.402\lib\net40\StructureMap.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="StructureMap.Net4, Version=4.2.0.402, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\structuremap.4.2.0.402\lib\net40\StructureMap.Net4.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Swashbuckle.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cd1bb07a5ac7c7bc, processorArchitecture=MSIL">
@@ -144,10 +157,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\IEEETalks.Common.IoC\IEEETalks.Common.IoC.csproj">
-      <Project>{86EE48F4-824D-42DF-9101-B42668DCACFB}</Project>
-      <Name>IEEETalks.Common.IoC</Name>
-    </ProjectReference>
     <ProjectReference Include="..\IEEETalks.Common\IEEETalks.Common.csproj">
       <Project>{8BA36301-8D49-42EA-A49C-9D124E59C72C}</Project>
       <Name>IEEETalks.Common</Name>
@@ -156,9 +165,9 @@
       <Project>{C894B274-294C-4B0D-91F1-1766D7BAD8C8}</Project>
       <Name>IEEETalks.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\IEEETalks.CQS.Infrastructure\IEEETalks.CQS.Infrastructure.csproj">
-      <Project>{6b9185d0-e191-4442-885b-c8c62f9f9ea8}</Project>
-      <Name>IEEETalks.CQS.Infrastructure</Name>
+    <ProjectReference Include="..\IEEETalks.CQRS\IEEETalks.CQRS.csproj">
+      <Project>{bf2c21fe-3747-41fa-b4d4-2cdcaa031cf6}</Project>
+      <Name>IEEETalks.CQRS</Name>
     </ProjectReference>
     <ProjectReference Include="..\IEEETalks.Persistance\IEEETalks.Persistance.csproj">
       <Project>{6cd75df1-ac75-4cdf-885f-053186f95643}</Project>

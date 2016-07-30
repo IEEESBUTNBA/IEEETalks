@@ -2,43 +2,39 @@
 using System.Collections.Generic;
 using System.Web.Http;
 using AutoMapper;
-using IEEETalks.Common.IoC;
 using IEEETalks.Core.Entities;
-using IEEETalks.CQS.Infrastructure.Queries;
 using IEEETalks.Host.API.Models;
-using System.Web.Http.Cors;
+using IEEETalks.CQRS.Queries;
+using MediatR;
 
 namespace IEEETalks.Host.API.Controllers
 {
+    public class EventsControllerProfile : Profile
+    {
+        public EventsControllerProfile()
+        {
+            CreateMap<Event, GetEventResponse>()
+                .ForMember(dest => dest.EventDate, opt => opt.MapFrom(ol => ol.GetFirstEventDate()));
+        }
+    }
+
     public class EventsController : ApiController
     {
-        //private readonly ICommandBus _commandBus;
-        private readonly GetActiveEvents _getActiveEventsQuery;
-        private readonly GetEvent _getEventQuery;
-
+        private readonly IMediator _mediator;
         private readonly IMapper _mapper;
 
-        public EventsController()
+        public EventsController(IMediator mediator, IMapper mapper)
         {
-            //_commandBus = Container.Current.Resolve<ICommandBus>();
-            _getActiveEventsQuery = Container.Current.Resolve<GetActiveEvents>();
-            _getEventQuery = Container.Current.Resolve<GetEvent>();
-
-            var mapperConfiguration = new MapperConfiguration(cfg =>
-            {
-                cfg.CreateMap<Event, GetEventResponse>()
-                    .ForMember(dest => dest.EventDate, opt => opt.MapFrom(ol => ol.GetFirstEventDate()));
-            });
-
-            _mapper = mapperConfiguration.CreateMapper();
+            _mediator = mediator;
+            _mapper = mapper;
         }
 
         // GET: api/Events
-        public GetEventsPagedResponse Get([FromUri]GetEventsPagedRequest request)
+        public GetEventsPagedResponse Get(GetEventsPagedRequest request)
         {
             request = request ?? new GetEventsPagedRequest();
 
-            var result = _getActiveEventsQuery.Run(request.CurrentPage * request.PageSize, request.PageSize);
+            var result = _mediator.Send(new GetActiveEvents(request.CurrentPage*request.PageSize, request.PageSize));
 
             var response = new GetEventsPagedResponse
             {
@@ -53,7 +49,7 @@ namespace IEEETalks.Host.API.Controllers
         // GET: api/Events/{id}
         public GetEventResponse Get(Guid id)
         {
-            var result = _getEventQuery.Run(id);
+            var result = _mediator.Send(new GetEvent(id));
 
             var response = _mapper.Map<Event, GetEventResponse>(result);
 

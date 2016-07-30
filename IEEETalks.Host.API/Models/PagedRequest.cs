@@ -1,6 +1,6 @@
 namespace IEEETalks.Host.API.Models
 {
-    public class PagedRequest
+    public abstract class PagedRequest
     {
         public virtual int PageSize => 20;
         public int CurrentPage { get; set; }

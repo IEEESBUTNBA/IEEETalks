@@ -1,7 +1,9 @@
-﻿using IEEETalks.Common;
+﻿using System.Web.Http;
+using IEEETalks.Common;
 
 namespace IEEETalks.Host.API.Models
 {
+    [FromUri]
     public class GetEventsPagedRequest : PagedRequest
     {
     }

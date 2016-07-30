@@ -10,11 +10,11 @@ namespace IEEETalks.Persistance
     {
         private readonly IMongoDatabase _database;
 
-        public MongoDbSession(string boundedContext = "IEEETalks-Default")
+        public MongoDbSession(IApplicationSettings applicationSettings)
         {
-            var client = new MongoClient(ApplicationSettings.DbConnectionString);
+            var client = new MongoClient(applicationSettings.DbConnectionString);
 
-            _database = client.GetDatabase(boundedContext);
+            _database = client.GetDatabase(applicationSettings.DbName);
         }
 
         public void Store<T>(string id, T item)

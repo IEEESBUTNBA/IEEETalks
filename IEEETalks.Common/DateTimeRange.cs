@@ -4,9 +4,12 @@ namespace IEEETalks.Common
 {
     public class DateTimeRange
     {
+        public IGuard Guard { get; set; }
+
         public DateTimeRange(DateTime start, DateTime end)
         {
-            Guard.ForDateRange(start, end, "start", "Date rage is not valid.");
+            Guard?.ForDateRange(start, end, "start", "Date rage is not valid.");
+
             Start = start;
             End = end;
         }

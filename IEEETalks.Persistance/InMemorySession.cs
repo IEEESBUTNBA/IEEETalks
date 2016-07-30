@@ -13,9 +13,7 @@ namespace IEEETalks.Persistance
         {
             _boundedContext = boundedContext;
             if (_collections == null)
-            {
                 _collections = new Dictionary<string, Dictionary<string, dynamic>>();
-            }
         }
 
         private void EnsureCollectionExist<T>()
