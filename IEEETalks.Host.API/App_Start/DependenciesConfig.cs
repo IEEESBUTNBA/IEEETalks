@@ -41,10 +41,10 @@ namespace IEEETalks.Host.API
                 cfg.For<IGuard>().Singleton().Use<Guard>();
             });
 
+#if DEBUG
             // TODO: review the following lines (alternatives?)
-            #if DEBUG
-                container.GetInstance<MockSessionDataInitializer>().Initialize();
-            #endif
+            container.GetInstance<MockSessionDataInitializer>().Initialize();
+#endif
 
             applicationSettings = container.GetInstance<IApplicationSettings>();
 
