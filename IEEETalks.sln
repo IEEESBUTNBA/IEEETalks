@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IEEETalks.Core", "IEEETalks.Core\IEEETalks.Core.csproj", "{C894B274-294C-4B0D-91F1-1766D7BAD8C8}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{FB8BAFC9-D94D-40B8-B5E5-0A5B3EA07FC7}"
+	ProjectSection(SolutionItems) = preProject
+		IEEETalks.CQRS\Queries\GetActiveEvents.cs = IEEETalks.CQRS\Queries\GetActiveEvents.cs
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{C9E3AC28-9FA6-4241-98EA-F3A7C4317D5F}"
 EndProject
