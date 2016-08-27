@@ -53,7 +53,7 @@ namespace IEEETalks.Persistance
 
             var result = (from x in _collections[GetCollectionName<T>()]
                           where x.Key == id
-                          select x.Value).FirstOrDefault();
+                          select x.Key).FirstOrDefault(); /* select x.Value */
 
             if (result != null)
                 _collections[GetCollectionName<T>()].Remove(result);

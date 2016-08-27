@@ -1,16 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using IEEETalks.Common;
 using IEEETalks.Persistance;
 using Moq;
 using NUnit.Framework;
 using IEEETalks.Core.Entities;
-using IEEETalks.Core.Enums;
 using IEEETalks.CQRS.Queries;
-using NUnit.Framework.Internal.Commands;
 using Shouldly;
 
 namespace IEEETalks.UnitTests.CQRS
