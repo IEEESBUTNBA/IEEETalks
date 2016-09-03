@@ -65,18 +65,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\GuardTests.cs" />
     <Compile Include="CQRS\GetActiveEventsHandlerTests.cs" />
     <Compile Include="CQRS\GetEventHandlerTests.cs" />
-    <Compile Include="CQRS\InMemorySessionTests.cs" />
+    <Compile Include="CQRS\InscriptionIntendedValidatorTests.cs" />
+    <Compile Include="Persistance\InMemorySessionTests.cs" />
     <Compile Include="CQRS\SaveInscriptionIntendedTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Persistance\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\IEEETalks.Common\IEEETalks.Common.csproj">
       <Project>{8ba36301-8d49-42ea-a49c-9d124e59c72c}</Project>
