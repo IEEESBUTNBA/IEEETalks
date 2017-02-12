@@ -27,9 +27,9 @@ _This project includes the great libraries listed below for some of its core fun
 * [MediatR](https://github.com/jbogard/MediatR)
 
 --
-
-_Copyright &copy; 2016 IEEESBUTNBA Contributors - Provided under the [Apache License, Version 2.0](http://apache.org/licenses/LICENSE-2.0.html)._
-
-
-![](http://ltgp.com.ar/images_dana/Poster_IEEETalks_small.jpg)
+###Poster
+![](http://ltgp.com.ar/images_dana/Poster_IEEETalks.jpg)
  
+ 
+ _Copyright &copy; 2016 IEEESBUTNBA Contributors - Provided under the [Apache License, Version 2.0](http://apache.org/licenses/LICENSE-2.0.html)._
+
