@@ -43,7 +43,11 @@
     <Compile Include="Entities\Event.cs" />
     <Compile Include="Entities\EventDate.cs" />
     <Compile Include="Entities\InscriptionIntended.cs" />
+    <Compile Include="Entities\User.cs" />
+    <Compile Include="Entities\UserPermission.cs" />
     <Compile Include="Enums\EventState.cs" />
+    <Compile Include="Enums\Permission.cs" />
+    <Compile Include="Enums\UserState.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
