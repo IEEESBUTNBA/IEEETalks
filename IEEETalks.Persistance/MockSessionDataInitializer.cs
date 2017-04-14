@@ -57,7 +57,7 @@ namespace IEEETalks.Persistance
                 Quota = 100,
                 EventState = EventState.Active,
                 Location = "UTN.BA (Medrano 951) - Aula Magna",
-                Image = "../img/ieee[3].jpg"
+                Image = "../../../assets/img/default-photo-square.jpg"
             });
 
             list.Add(new Event()
@@ -73,7 +73,7 @@ namespace IEEETalks.Persistance
                 Quota = 100,
                 EventState = EventState.Active,
                 Location = "UTN.BA (Medrano 951) - Aula Magna",
-                Image = "../img/14474300157302[1].jpg"
+                Image = "../../../assets/img/square-photography01.jpg"
             });
 
             list.Add(new Event()
@@ -89,7 +89,7 @@ namespace IEEETalks.Persistance
                 Quota = 100,
                 EventState = EventState.Active,
                 Location = "UTN.BA (Medrano 951) - Aula Magna",
-                Image = "../img/ieee_ar_kite_azul_v[1].png"
+                Image = "../../../assets/img/image-91-square.jpeg"
             });
             list.Add(new Event()
             {
@@ -104,11 +104,11 @@ namespace IEEETalks.Persistance
                 Quota = 100,
                 EventState = EventState.Active,
                 Location = "UTN.BA (Medrano 951) - Aula Magna",
-                Image = "../img/14474300157302[1].jpg"
+                Image = "../../../assets/img/square-photography01.jpg"
             });
 
             var rd = new Random();
-            string[] pics = new string[] { "../img/14474300157302[1].jpg", "../img/ieee_ar_kite_azul_v[1].png", "../img/ieee[3].jpg" };
+            string[] pics = new string[] { "./../../assets/img/image-91-square.jpeg", "../../../assets/img/square-photography01.jpg", "../../../assets/img/default-photo-square.jpg" };
 
             for (int i = 0; i < 300; i++)
             {
@@ -117,7 +117,7 @@ namespace IEEETalks.Persistance
                     Id = Guid.NewGuid(),
                     ActiveSinceDate = activeRange.Start,
                     ActiveUntilDate = activeRange.End,
-                    Name = "Event Demo "+(i+4).ToString(),
+                    Name = "Event Demo " + (i + 4).ToString(),
                     Summary = "Summary demo 4",
                     Description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
                     EventDates = eventDates,
@@ -130,6 +130,7 @@ namespace IEEETalks.Persistance
             }
             return list;
         }
+
 
     }
 }

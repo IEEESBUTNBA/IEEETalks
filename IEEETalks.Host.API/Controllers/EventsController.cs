@@ -6,6 +6,7 @@ using IEEETalks.Core.Entities;
 using IEEETalks.Host.API.Models;
 using IEEETalks.CQRS.Queries;
 using MediatR;
+using System.Web.Http.Cors;
 
 namespace IEEETalks.Host.API.Controllers
 {
@@ -17,7 +18,7 @@ namespace IEEETalks.Host.API.Controllers
                 .ForMember(dest => dest.EventDate, opt => opt.MapFrom(ol => ol.GetFirstEventDate()));
         }
     }
-
+   
     public class EventsController : ApiController
     {
         private readonly IMediator _mediator;
